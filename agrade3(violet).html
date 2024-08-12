@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="10;
+        url=agrade3.1.html">
+    <link rel="stylesheet" href="style.css">
+    <title>Efeito Matrix</title>
+</head>
+<style>
+  body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+</style>
+<body>
+    <canvas id="canvas"></canvas>
+    <script type="text/javascript">
+        var canvas = document.getElementById('canvas');
+        var ctx = canvas.getContext('2d');
+
+        canvas.height = window.innerHeight;
+        canvas.width = window.innerWidth;
+
+        var texts = '靈魂之光淨化身體，心靈平靜平衡存在'.split('');
+        var fontSize = 16;
+        var columns = canvas.width/fontSize;
+        var drops = [];
+        for(var x =0; x < columns; x++){
+            drops[x] = 1;
+        }
+
+        function draw(){
+            ctx.fillStyle = 'rgba(0,0,0,0.05)';
+            ctx.fillRect(0,0,canvas.width,canvas.height);
+            ctx.fillStyle = '#EE82EE';
+            ctx.font = fontSize+ 'px arial';
+            for(var i =0; i < drops.length; i++){
+                var text = texts[Math.floor(Math.random()*texts.length)];
+                ctx.fillText(text,i*fontSize,drops[i]*fontSize);
+
+                if(drops[i]*fontSize > canvas.height || Math.random() > 0.95){
+                    drops[i] = 0;
+                }
+
+                drops[i]++;
+            }
+        }
+
+        setInterval(draw,77);
+    </script>
+</body>
+</html>

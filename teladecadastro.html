@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A-Grade(Cadastro)</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0; /* Remove margens padrão do body */
+    padding: 0; /* Remove preenchimento padrão do body */
+    background-image: url('eecdb55768e30c90fe9e91ba6db1e9b0.jpg'); /* URL da imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* 100% da altura da viewport */
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+  }
+  #login-icon {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 77px;
+    color: #007bff; /* Cor do símbolo */
+  }
+  #login-form {
+    background-color: rgba(255, 255, 255, 0.8);
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    border: 1px solid green;
+    position: relative;
+  }
+  #login-icon {
+    font-size: 48px;
+  }
+  #login-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff; /* Cor do título */
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Contorno preto */
+  }
+  #login-form input[type="text"],
+  #login-form input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid greenyellow; /* Cor da borda dos campos de entrada */
+    border-radius: 4px;
+    color: white; /* Cor do texto nos campos de entrada */
+    background-color: transparent; /* Cor de fundo transparente */
+  }
+  #login-form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7); /* Cor de fundo */
+    color: #fff;
+    border: 1px solid green;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  #login-form input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  .signup-link {
+    text-align: center;
+    margin-top: 10px;
+  }
+  .signup-link a {
+    color: deepskyblue;
+    text-decoration: none;
+  }
+  .signup-link a:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+
+<div id="login-form">
+  <h2>Para inscrever-se na Grade<br>Preencha o formulário.</h2>
+  <form onsubmit="register(); return false;">
+    <div>
+      <input id="email" type="text" placeholder="Coloque seu E-mail">
+    </div>
+    <div>
+      <input id="password" type="password" placeholder="Coloque sua Senha">
+    </div>
+    <input type="submit" value="Concluir">
+  </form>
+  <div id="error"></div>
+  <div class="signup-link">
+    <p>Já tem cadastro? <a href="teladeloguin.html"><u>Entre por aqui</u></a></p>
+  </div>
+</div>
+<script src="siderbar.js"></script>
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js";
+  import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-auth.js";
+
+  
+
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+
+  window.register = function() {
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const errorDiv = document.getElementById('error');
+
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        const user = userCredential.user;
+        errorDiv.textContent = "Cadastro realizado com sucesso!";
+        errorDiv.style.color = "green";
+      })
+      .catch((error) => {
+        const errorMessage = error.message;
+        errorDiv.textContent = errorMessage;
+      });
+  };
+</script>
+</body>
+</html>

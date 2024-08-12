@@ -1,0 +1,351 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-X1bdUNaezZ0q3EEXYm3dUlp6pePYoRv6LQzqGqk28u8Rxtrct3n9C3d8T4R/w7F1" crossorigin="anonymous">
+<meta charset="UTF-8">
+<meta http-equiv=X-UA-compatible"content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="desciption"content="Esse é o meu primeiro site">
+<meta name="keywords"content="Primeiro,projeto,html,para,fazer,um,site,redesocial">
+<meta name=recebe"author"content="Jose Ricardo">
+<title>A-Grade</title>
+<script src="https://apis.google.com/js/api.js"></script>
+<link rel="stylesheet" href="style.css">
+<style>
+
+</style>
+
+</head>
+<body>
+<img src="agrade.logo.png" alt="Logo com Efeito Chamas Amarelas">
+<div class="container">
+<div class="header">
+<h3><div id="youtube" class="youtube">Pesquise no YouTube</div><div></div></h3>
+<input type="text" id="termoPesquisa" placeholder="Titulo do video">
+<button onclick="pesquisar()">Ir</button>
+
+<div id="resultadoPesquisa"></div>
+
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="fecharModal()">&times;</span>
+    <iframe id="videoPlayer" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+    <div class="marquee">
+      <span id="welcomeMessage">Bem vindo a Grade, Usuário!</span>
+    </div>
+
+    <button class="toggle-button" onclick="toggleSidebar()">Abrir</button>
+    <button id="outroBotao4" class="toggle-button">StarChat</button>
+    <button id="outroBotao5" class="toggle-button">Safira Bot</button><br><br>
+    <button id="outroBotao" class="toggle-button">Pág 1</button>
+    <button id="outroBotao2" class="toggle-button">Pág 2</button>
+    <button id="outroBotao3" class="toggle-button">Pág 3</button>
+    
+    
+    
+
+
+</div>
+<div class="sidebar" id="sidebar">
+  <div class="profile-pic"></div>
+  <p>Nome: <span id="userName"></span></p>
+  <p>Idade: <span id="userAge"></span></p>
+  <!-- Outros elementos como botões e modais -->
+    <!-- Botão para abrir o modal -->
+    <button class="open-button" onclick="openModal()">(Chat-Bot)</button>
+    <!-- Modal -->
+    <div id="chatModal" class="modal">
+      <div class="modal-content">Chat Bot
+        <span class="close" onclick="closeModal()" style="cursor:pointer;">&times;</span>
+        <div class="chat" id="chat">
+          <!-- Mensagens do chat aparecerão aqui -->
+        </div>
+        <input type="text" id="userInput" class="chat-input" placeholder="Digite sua mensagem...">
+        <button class="chat-button" onclick="sendMessage()">Enviar</button>
+      </div>
+    </div>
+    <br>
+    <!-- Botão de configurações -->
+<button class="toggle-button" onclick="toggleConfigPanel()">Configuração</button>
+<!-- Painel de Configurações -->
+<div class="config-panel" id="configPanel">
+<div class="config-content">
+<h1>Personalize</h1>
+
+<p>Escolha a cor do texto:</p>
+<select id="corTexto" onchange="mudarCorTexto()">
+<option value="yellow">amarelo</option>
+<option value="blue">azul</option>
+<option value="red">vermelho</option>
+<option value="green">verde</option>
+<option value="cyan">ciano</option>
+<option value="magenta">magenta</option>
+<option value="black">preto</option>
+<option value="white">branco</option>
+<option value="gray">cinza</option>
+<option value="orange">laranja</option>
+<option value="aqua">água</option>
+<option value="fuchsia">fúcsia</option>
+<option value="lime">limão</option>
+<option value="maroon">marrom</option>
+<option value="navy">marinho</option>
+<option value="olive">oliva</option>
+<option value="purple">roxo</option>
+<option value="silver">prata</option>
+<option value="teal">verde-azulado</option>
+<option value="indigo">índigo</option>
+<option value="aliceblue">azul alice</option>
+<option value="antiquewhite">branco antiquado</option>
+<option value="beige">bege</option>
+<option value="bisque">bisque</option>
+<option value="blanchedalmond">amêndoa branqueada</option>
+<option value="blueviolet">azul-violeta</option>
+<option value="brown">marrom</option>
+<option value="burlywood">burlywood</option>
+<option value="chartreuse">chartreuse</option>
+<option value="chocolate">chocolate</option>
+<option value="coral">coral</option>
+<option value="cornflowerblue">azul flor de milho</option>
+<option value="cornsilk">cornsilk</option>
+<option value="crimson">carmesim</option>
+<option value="darkblue">azul escuro</option>
+<option value="darkcyan">ciano escuro</option>
+<option value="darkgoldenrod">ouro escuro</option>
+<option value="darkgray">cinza escuro</option>
+<option value="darkgreen">verde escuro</option>
+<option value="darkkhaki">khaki escuro</option>
+<option value="darkmagenta">magenta escuro</option>
+<option value="darkolivegreen">verde oliva escuro</option>
+<option value="darkorange">laranja escuro</option>
+<option value="darkorchid">orquídea escura</option>
+<option value="darkred">vermelho escuro</option>
+<option value="darksalmon">salmão escuro</option>
+<option value="darkseagreen">verde mar escuro</option>
+<option value="darkslateblue">azul ardósia escuro</option>
+<option value="darkslategray">cinza ardósia escuro</option>
+<option value="darkturquoise">turquesa escura</option>
+<option value="darkviolet">violeta escuro</option>
+<option value="deeppink">rosa profundo</option>
+<option value="deepskyblue">azul céu profundo</option>
+<option value="dimgray">cinza escurecido</option>
+<option value="dodgerblue">azul dodger</option>
+<option value="firebrick">tijolo de fogo</option>
+<option value="floralwhite">branco floral</option>
+<option value="forestgreen">verde floresta</option>
+<option value="gainsboro">gainsboro</option>
+<option value="ghostwhite">branco fantasma</option>
+<option value="gold">ouro</option>
+<option value="goldenrod">goldenrod</option>
+<option value="greenyellow">verde-amarelo</option>
+<option value="honeydew">mel</option>
+<option value="hotpink">rosa quente</option>
+<option value="indianred">vermelho indiano</option>
+<option value="lightblue">azul claro</option>
+<option value="lightcoral">coral claro</option>
+<option value="lightcyan">ciano claro</option>
+<option value="lightgoldenrodyellow">amarelo dourado claro</option>
+<option value="lightgray">cinza claro</option>
+<option value="lightgreen">verde claro</option>
+<option value="lightpink">rosa claro</option>
+<option value="lightsalmon">salmão claro</option>
+<option value="lightseagreen">verde-mar claro</option>
+<option value="lightskyblue">azul céu claro</option>
+<option value="lightslategray">cinza ardósia claro</option>
+<option value="lightsteelblue">azul aço claro</option>
+<option value="lightyellow">amarelo claro</option>
+<option value="limegreen">verde limão</option>
+<option value="linen">linho</option>
+<option value="mediumaquamarine">aquamarine médio</option>
+<option value="mediumblue">azul médio</option>
+<option value="mediumorchid">orquídea média</option>
+<option value="mediumpurple">roxo médio</option>
+<option value="mediumseagreen">verde-mar médio</option>
+<option value="mediumslateblue">azul ardósia médio</option>
+<option value="mediumspringgreen">verde primavera médio</option>
+<option value="mediumturquoise">turquesa média</option>
+<option value="mediumvioletred">vermelho violeta médio</option>
+<option value="midnightblue">azul meia-noite</option>
+<option value="mintcream">creme de hortelã</option>
+<option value="mistyrose">rosa nevoento</option>
+<option value="moccasin">mocassim</option>
+<option value="navajowhite">branco navajo</option>
+<option value="oldlace">renda antiga</option>
+<option value="olivedrab">oliva escura</option>
+<option value="orangered">vermelho laranja</option>
+<option value="papayawhip">papaya whip</option>
+<option value="peachpuff">puff de pêssego</option>
+<option value="peru">peru</option>
+<option value="powderblue">azul em pó</option>
+<option value="rosybrown">marrom rosado</option>
+<option value="royalblue">azul real</option>
+<option value="saddlebrown">marrom sela</option>
+<option value="salmon">salmão</option>
+<option value="sandybrown">marrom arenoso</option>
+<option value="seagreen">verde-mar</option>
+<option value="seashell">concha</option>
+<option value="sienna">sienna</option>
+<option value="skyblue">azul céu</option>
+<option value="slateblue">azul ardósia</option>
+<option value="slategray">cinza ardósia</option>
+<option value="snow">neve</option>
+<option value="springgreen">verde primavera</option>
+<option value="steelblue">azul aço</option>
+<option value="tan">tan</option>
+<option value="teal">verde-azulado</option>
+<option value="thistle">cardo</option>
+<option value="tomato">tomate</option>
+<option value="turquoise">turquesa</option>
+<option value="violet">violeta</option>
+<option value="wheat">trigo</option>
+<option value="whitesmoke">fumaça branca</option>
+<option value="yellowgreen">verde-amarelo</option>
+</select>
+
+
+<button onclick="fecharConfigPanel()">Fechar</button>
+</div>
+</div><br>
+<button id="outroBotao6" class="toggle-button">Sobre</button><br>
+ <button class="toggle-button" onclick="toggleSidebar()">Fechar</button><br>
+ <button class="toggle-button" onclick="logout()">Deslogar</button>
+</div>
+<!--- class="content"-->
+<h2>Conteúdo Principal
+Sam Flynn, um jovem que descobre um portal para um universo paralelo, onde os programas de computador têm vida própria. Preso nesse mundo, Sam se vê envolvido em uma batalha épica contra Clu, um ditador virtual que busca subjugar todos os habitantes digitais. Com a ajuda de Quorra, uma guerreira destemida, Sam embarca em uma missão para libertar esse mundo virtual da opressão e restaurar o equilíbrio entre os dois reinos. "A Revolução dos Bits" mergulha os espectadores em uma aventura emocionante, repleta de reviravoltas eletrizantes e confrontos épicos, enquanto explora os limites entre o mundo real e o digital.".</p></h2>
+
+</div>
+
+    <script src="script.js"></script>
+    <script src="siderbar.js"></script>
+      <script type="module">
+    import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js';
+    import { getAuth, onAuthStateChanged, signOut } from 'https://www.gstatic.com/firebasejs/9.6.0/firebase-auth.js';
+    import { getDatabase, ref, get } from 'https://www.gstatic.com/firebasejs/9.6.0/firebase-database.js';
+
+    // Configurações do Firebase
+    
+
+    // Inicialize o Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const database = getDatabase(app);
+
+    // Função de logout
+    window.logout = function() {
+      signOut(auth).then(() => {
+        // Redirecionar para a página de login após o logout
+        window.location.href = 'login.html';
+      }).catch((error) => {
+        console.error("Erro ao fazer logout:", error);
+      });
+    }
+
+    // Verificar estado de autenticação
+    onAuthStateChanged(auth, (user) => {
+      if (!user) {
+        // Se o usuário não estiver autenticado, redirecione para a página de login
+        window.location.href = 'login.html';
+      } else {
+        // Usuário autenticado
+        console.log("Usuário autenticado:", user);
+
+        // Exemplo de leitura de dados do usuário autenticado
+        const userId = user.uid;
+        const userRef = ref(database, 'users/' + userId);
+        get(userRef).then((snapshot) => {
+          if (snapshot.exists()) {
+            const userData = snapshot.val();
+            console.log("Dados do usuário:", userData);
+          } else {
+            console.log("Dados não encontrados.");
+          }
+        }).catch((error) => {
+          console.error("Erro ao ler dados do usuário:", error);
+        });
+      }
+    });
+        // Função de logout
+        window.logout = function() {
+          signOut(auth).then(() => {
+            // Redirecionar para a página de login após o logout
+            window.location.href = 'teladeloguin.html';
+          }).catch((error) => {
+            console.error("Erro ao fazer logout:", error);
+          });
+        }
+    
+        // Verificar estado de autenticação
+        onAuthStateChanged(auth, (user) => {
+          if (!user) {
+            // Se o usuário não estiver autenticado, redirecione para a página de login
+            window.location.href = 'teladeloguin.html';
+          } else {
+            // Usuário autenticado
+            console.log("Usuário autenticado:", user);
+    
+            // Exemplo de leitura de dados do usuário autenticado
+            const userId = user.uid;
+            const userRef = ref(database, 'users/' + userId);
+            get(userRef).then((snapshot) => {
+              if (snapshot.exists()) {
+                const userData = snapshot.val();
+                console.log("Dados do usuário:", userData);
+              } else {
+                console.log("Dados não encontrados.");
+              }
+            }).catch((error) => {
+              console.error("Erro ao ler dados do usuário:", error);
+            });
+          }
+        });
+        // Função para atualizar a sidebar com informações do usuário
+        function updateSidebar() {
+          if (auth.currentUser) {
+            const user = auth.currentUser;
+        
+            // Nome e foto de perfil
+            const userName = user.displayName || 'Usuário';
+            const userPhotoURL = user.photoURL || 'd60436843e96faa98eae364c7af8e91c.jpg'; // Substitua com uma URL padrão se não houver foto
+        
+            // Exemplo de apelido e idade (pode precisar ser obtido de outro lugar)
+            const userNickname = 'Apelido padrão'; // Substitua com a lógica para obter o apelido
+            const userAge = 'Idade padrão'; // Substitua com a lógica para obter a idade
+        
+            // Atualizando elementos do DOM
+            const profilePicElement = document.querySelector('.profile-pic');
+            profilePicElement.style.backgroundImage = `url(${userPhotoURL})`;
+            document.getElementById('userName').textContent = userName;
+            document.getElementById('userNickname').textContent = userNickname;
+            document.getElementById('userAge').textContent = userAge;
+          }
+        }
+        
+        // Chame a função quando o usuário estiver autenticado
+        auth.onAuthStateChanged(user => {
+          if (user) {
+            updateSidebar();
+          }
+        });
+        // Função para atualizar a mensagem de boas-vindas com o nome do usuário
+function updateWelcomeMessage(userName) {
+    const welcomeMessage = document.getElementById('welcomeMessage');
+    welcomeMessage.textContent = `Bem vindo a Grade Usuário: ${userName}!`;
+}
+
+// Monitorar o estado de autenticação do usuário
+auth.onAuthStateChanged((user) => {
+    if (user) {
+        const userName = user.displayName || 'Usuário';
+        updateWelcomeMessage(userName);
+    } else {
+        updateWelcomeMessage('Usuário');
+    }
+});
+        
+  </script>
+  
+</body>
+</html>

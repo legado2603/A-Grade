@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A-Grade(Safira Bot)</title>
+  <style>
+    body {
+      font-family: monospace;
+      background-image: url('eecdb55768e30c90fe9e91ba6db1e9b0.jpg'); 
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    #chat-box {
+      width: 80%;
+      max-width: 800px;
+      height: 60vh;
+      overflow-y: auto;
+      border: 1px solid #333;
+      background-image: url('eecdb55768e30c90fe9e91ba6db1e9b0.jpg');
+      background-color: #111;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    #input-container {
+      width: 80%;
+      max-width: 800px;
+      display: flex;
+    }
+
+    input[type="text"] {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #333;
+      border-radius: 5px;
+      background-color: #222;
+      color: #fff;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #444;
+      color: #fff;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+
+    .user {
+      color: #ffff00; /* Amarelo */
+    }
+
+    .bot {
+      color: #ff0000; /* Vermelho */
+    }
+
+    .online-users {
+      margin-bottom: 10px;
+      color: #00ff00; /* Verde */
+    }
+    .logo-title {
+    display: inline-block;
+    vertical-align: middle;
+    height: 3.5em; /* Define a altura da logo em relação ao tamanho da fonte */
+    width: auto;   /* Mantém a proporção da imagem */
+}
+  </style>
+</head>
+<body>
+  <h1>
+    <img src="safirabot.png" alt="Logo com Efeito Chamas Amarelas" class="logo-title">
+  </h1>
+  <p>Digite(/?)</p>
+  <div id="chat-box"></div>
+  <div id="online-users" class="online-users">
+    <span id="online-count">Usuários online: 0</span>
+  </div>
+  <div id="input-container">
+    <input type="text" id="user-input" placeholder="Digite seu comando...">
+    <button onclick="sendCommand()">Enviar</button>
+  </div>
+  
+  <script src="siderbar.js"></script>
+  <script type="module">
+    import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js';
+    import { getDatabase, ref, push, child, get, set, onChildAdded, onValue } from 'https://www.gstatic.com/firebasejs/9.6.0/firebase-database.js';
+    import { getAuth, signInWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/9.6.0/firebase-auth.js';
+
+    // Configuração do Firebase
+    
+
+    // Inicialize o Firebase
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
+    const auth = getAuth(app);
+
+    let currentRoom = null;
+    let commands = {};
+
+    // Função para carregar comandos do Firebase
+    function loadCommands() {
+      const commandsRef = ref(database, 'commands');
+      get(commandsRef).then((snapshot) => {
+        if (snapshot.exists()) {
+          commands = snapshot.val();
+        } else {
+          addMessage('bot', 'Nenhum comando disponível.');
+        }
+      }).catch((error) => {
+        addMessage('bot', `Erro ao carregar comandos: ${error.message}`);
+      });
+    }
+
+    // Função para autenticar o usuário
+    function loginUser(email, password) {
+      signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          addMessage('bot', `Login bem-sucedido para ${email}.`);
+        })
+        .catch((error) => {
+          addMessage('bot', `Erro ao fazer login: ${error.message}`);
+        });
+    }
+
+    // Função para enviar comandos
+    window.sendCommand = function() {
+      const input = document.getElementById('user-input').value.trim();
+      const [command, ...args] = input.split(' ');
+
+      if (!command) {
+        addMessage('bot', 'Comando inválido.');
+        return;
+      }
+
+      const sanitizedCommand = command.replace(/[/\\#.$[\]]/g, '_');
+
+      if (commands[sanitizedCommand]) {
+        addMessage('bot', commands[sanitizedCommand]);
+      } else {
+        switch (command.toLowerCase()) {
+          case '/login':
+            const [email, password] = args.join(' ').split(':');
+            if (email && password) {
+              loginUser(email, password);
+            } else {
+              addMessage('bot', 'Formato do comando /login inválido. Use /login email:senha');
+            }
+            break;
+
+          case '/criar':
+            const roomName = args.join(' ').trim();
+            if (roomName) {
+              createRoom(roomName);
+            } else {
+              addMessage('bot', 'Formato do comando /criar inválido. Use /criar nomeDaSala');
+            }
+            break;
+
+          case '/salas':
+            listRooms();
+            break;
+
+          case '/entrar':
+            const enterRoomName = args.join(' ').trim();
+            if (enterRoomName) {
+              enterRoom(enterRoomName);
+            } else {
+              addMessage('bot', 'Formato do comando /entrar inválido. Use /entrar nomeDaSala');
+            }
+            break;
+
+          case '/sair':
+            if (currentRoom) {
+              leaveRoom(currentRoom);
+            } else {
+              addMessage('bot', 'Você não está em nenhuma sala.');
+            }
+            break;
+
+          case '/deletar':
+            const deleteRoomName = args.join(' ').trim();
+            if (deleteRoomName) {
+              deleteRoom(deleteRoomName);
+            } else {
+              addMessage('bot', 'Formato do comando /deletar inválido. Use /deletar nomeDaSala');
+            }
+            break;
+
+          default:
+            if (currentRoom) {
+              sendMessage(input);
+            } else {
+              addMessage('bot', 'Comando não reconhecido. Digite /entrar nomeDaSala para entrar em uma sala.');
+            }
+            break;
+        }
+      }
+
+      document.getElementById('user-input').value = '';
+    };
+
+    // Função para adicionar o usuário à sala
+    function addUserToRoom() {
+      const userRef = ref(database, 'rooms/' + currentRoom + '/users/' + (auth.currentUser ? auth.currentUser.uid : 'unknown'));
+      set(userRef, {
+        email: auth.currentUser ? auth.currentUser.email : 'unknown',
+        joinedAt: new Date().toISOString()
+      });
+    }
+
+    // Função para criar uma sala
+    function createRoom(roomName) {
+      const roomRef = ref(database, 'rooms/' + roomName);
+      set(roomRef, {
+        createdBy: auth.currentUser ? auth.currentUser.uid : 'unknown',
+        createdAt: new Date().toISOString()
+      }).then(() => {
+        addMessage('bot', `Sala "${roomName}" criada com sucesso.`);
+      }).catch((error) => {
+        addMessage('bot', `Erro ao criar a sala: ${error.message}`);
+      });
+    }
+
+    // Função para listar as salas disponíveis
+    function listRooms() {
+      const roomsRef = ref(database, 'rooms');
+      get(roomsRef).then((snapshot) => {
+        if (snapshot.exists()) {
+          const rooms = snapshot.val();
+          addMessage('bot', `Salas disponíveis: ${Object.keys(rooms).join(', ')}`);
+        } else {
+          addMessage('bot', 'Nenhuma sala disponível no momento.');
+        }
+      }).catch((error) => {
+        addMessage('bot', `Erro ao listar salas: ${error.message}`);
+      });
+    }
+
+    // Função para entrar em uma sala
+    function enterRoom(roomName) {
+      const roomRef = ref(database, 'rooms/' + roomName);
+      get(roomRef).then((snapshot) => {
+        if (snapshot.exists()) {
+          currentRoom = roomName;
+          addUserToRoom(); // Adiciona o usuário à sala
+          addMessage('bot', `Você entrou na sala "${roomName}".`);
+          updateOnlineUsers();
+
+          // Configura o listener para carregar as mensagens da sala
+          const messagesRef = ref(database, 'rooms/' + currentRoom + '/messages');
+          onChildAdded(messagesRef, (snapshot) => {
+            const data = snapshot.val();
+            if (data) {
+              addMessage('user', `${data.user}: ${data.message}`);
+            }
+          });
+
+        } else {
+          addMessage('bot', `Sala "${roomName}" não encontrada.`);
+        }
+      }).catch((error) => {
+        addMessage('bot', `Erro ao entrar na sala: ${error.message}`);
+      });
+      }
+      
+      // Função para sair de uma sala
+      function leaveRoom(roomName) {
+        if (auth.currentUser) {
+          const userRef = ref(database, 'rooms/' + roomName + '/users/' + auth.currentUser.uid);
+          set(userRef, null).then(() => {
+            addMessage('bot', `Você saiu da sala "${roomName}".`);
+            currentRoom = null;
+            updateOnlineUsers();
+          }).catch((error) => {
+            addMessage('bot', `Erro ao sair da sala: ${error.message}`);
+          });
+        }
+      }
+      
+      // Função para deletar uma sala
+      function deleteRoom(roomName) {
+        const roomRef = ref(database, 'rooms/' + roomName);
+        set(roomRef, null).then(() => {
+          addMessage('bot', `Sala "${roomName}" foi deletada com sucesso.`);
+        }).catch((error) => {
+          addMessage('bot', `Erro ao deletar a sala: ${error.message}`);
+        });
+      }
+      
+      // Função para enviar uma mensagem na sala atual
+      function sendMessage(message) {
+        if (auth.currentUser) {
+          const messagesRef = ref(database, 'rooms/' + currentRoom + '/messages');
+          push(messagesRef, {
+            user: auth.currentUser.email,
+            message: message,
+            timestamp: new Date().toISOString()
+          }).catch((error) => {
+            addMessage('bot', `Erro ao enviar mensagem: ${error.message}`);
+          });
+        }
+      }
+      
+      // Função para adicionar uma mensagem ao chat box
+      function addMessage(sender, message) {
+        const chatBox = document.getElementById('chat-box');
+        const messageElement = document.createElement('div');
+        messageElement.classList.add(sender === 'bot' ? 'bot' : 'user');
+        messageElement.textContent = message;
+        chatBox.appendChild(messageElement);
+        chatBox.scrollTop = chatBox.scrollHeight;
+      }
+      
+      // Função para atualizar a contagem de usuários online
+      function updateOnlineUsers() {
+        if (currentRoom) {
+          const usersRef = ref(database, 'rooms/' + currentRoom + '/users');
+          onValue(usersRef, (snapshot) => {
+            const users = snapshot.val();
+            const onlineCount = users ? Object.keys(users).length : 0;
+            document.getElementById('online-count').textContent = `Usuários online: ${onlineCount}`;
+          });
+        } else {
+          document.getElementById('online-count').textContent = 'Usuários online: 0';
+        }
+      }
+      
+      // Carregar comandos ao iniciar
+      loadCommands();
+      </script> 
+      </body> 
+      </html>
+      

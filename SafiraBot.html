@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Bars com Nomes de Arquivos</title>
+    <style>
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden; /* Impede rolagem */
+}
+
+body {
+    background-color: #000; /* Fundo preto para a página */
+    background-image: url('a875e73d0a7738025e9f46fd8372f4e7.jpg'); 
+    color: #fff; /* Cor do texto padrão */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.progress-container {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px; /* Espaçamento entre o botão e a primeira barra */
+}
+
+.button {
+    background: linear-gradient(45deg, #cc0000, #990000);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 0 10px #cc0000; /* Efeito neon vermelho */
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 10px; /* Define o espaçamento entre o botão e a barra */
+    margin-left: 30px; /* Permite ajustar a posição horizontal */
+    margin-right: auto; /* Centraliza o botão */
+    width: fit-content; /* Ajusta a largura do botão */
+}
+
+.button:hover {
+    background: linear-gradient(45deg, #990000, #cc0000);
+    box-shadow: 0 0 20px #cc0000;
+}
+
+.button.clicked {
+    animation: clickEffect 0.3s;
+}
+
+@keyframes clickEffect {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.progress-bar {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    background-color: #222; /* Cor de fundo das barras */
+    margin-bottom: 10px; /* Distância reduzida entre as barras */
+    overflow: hidden;
+    border-radius: 5px;
+    border: 2px solid #00ff00; /* Borda neon verde */
+    box-shadow: 0 0 10px #00ff00; /* Efeito neon verde na borda */
+}
+
+.progress-bar .progress {
+    height: 100%;
+    background-color: #ffeb3b; /* Cor amarela das barras de progresso */
+    width: 0;
+    transition: width 0.5s linear;
+}
+
+.progress-bar.final .progress {
+    background-color: #00bcd4; /* Cor azul claro da última barra de progresso */
+}
+
+.progress-bar.final {
+    border-color: #00bcd4; /* Borda neon azul claro para a barra final */
+    box-shadow: 0 0 10px #00bcd4; /* Efeito neon azul claro */
+}
+
+.progress-bar.seventh .progress {
+    background-color: #00bcd4; /* Cor azul claro da sétima barra quando carregando */
+}
+
+.progress-bar.seventh {
+    background-color: #222; /* Cor padrão da sétima barra antes de carregar */
+}
+
+.progress-bar.rainbow .progress {
+    background: linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #7fff00, #00ff00, #00ff7f, #00ffff, #007fff, #0000ff, #7f00ff, #ff00ff, #ff007f);
+    background-size: 400% 100%;
+    animation: rainbow 5s linear infinite;
+}
+
+@keyframes rainbow {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 0%; }
+}
+
+.file-name {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    font-size: 14px;
+    color: #000; /* Cor preta do texto */
+    text-shadow: 1px 1px 2px #000; /* Sombra preta no texto */
+    transform: translateY(-50%);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+    </style>
+</head>
+<body>
+
+<div class="progress-container">
+    <button class="button" id="startButton">Iniciar Carregamento</button>
+
+    <div class="progress-bar" id="progress1">
+        <div class="file-name" id="fileName1" data-files="glitchlog.old,data01.txt,temp_cache.tmp,cybercat.pic,logfile.bak,init_boot.log,error404.sys,byte_dump.hex,sector9.img,orbital.txt,cipher.zzz,cyberpunk.doc,neonbuzz.wav,hologram.vhs,temp_files.bin,darksky.old,log0001.txt,backup.pak,datastream.err,glitch_mem.dmp,runfile.js,hackmode.exe,neon_buzz.log,sys_init.tmp,traceback.bak,virtualcache.cat,log1.old,error_fix.reg,cache01.bak,dumpfile.ans">Iniciando download...</div>
+        <div class="progress"></div>
+    </div>
+    <div class="progress-bar" id="progress2">
+        <div class="file-name" id="fileName2" data-files="neon-mist.exe,backup_sys001.dll,ghost.vhs,log003.txt,hack_protocol.ans,bootconfig.cfg,datamatrix.ini,cybernetics.sys,neural_load.dll,security.pak,cybernetic.msi,urban_scan.db,synthwave.dat,glitch_effect.tmp,nanobot.reg,dystopia.log,darknet.sql,backup_main.bak,temp01.chk,log4.tmp,ghost_patch.zst,run_script.bat,neonlink.cfg,error_report.log,shadow_data.sav,arcade_core.bin,mindwarp.bin,cache_hub.old,datastream.iso,webcache.mdb">Aguardando...</div>
+        <div class="progress"></div>
+    </div>
+    <div class="progress-bar" id="progress3">
+        <div class="file-name" id="fileName3" data-files="darkweb_access.apk,neon_script.py,hacknet.iso,glitch_scenario.nfo,smoke-mirror.old,ai_neural.dll,quantum_init.bak,plasmastream.vhs,cybercode.exe,hackentry.img,neonlight.pak,tempdata.log,sysroot.old,data_dump.iso,cyberhack.sys,techglow.dll,archive.err,fluxwave.ini,logfile0004.txt,error_vault.img,neurox.bat,mech_unit.exe,neonrunner.log,datapad.tmp,hackbot.sys,darkweb.msi,arcade_patch.reg,virtualdrive.iso,digital_shadow.img,network_patch.dll">Processando...</div>
+        <div class="progress"></div>
+    </div>
+    <div class="progress-bar" id="progress4">
+        <div class="file-name" id="fileName4" data-files="hologram.dmg,cipher_matrix.json,datastream.zzz,cyberpunk.rom,mindlink.sys,database.hld,plasma_cache.tmp,nanowire.ini,syncdrive.exe,glitch.txt,neonpulse.bat,cyberload.log,init_spark.dll,backupflux.old,datalink.err,mech_core.sys,arcadehack.msi,tracepath.log,ghost_image.img,netshift.exe,cypunkinit.bat,neonholo.sys,darkfiber.bak,datacore.iso,backup007.old,plasma_run.log,codeflux.ini,shadow_gate.exe,dumpcache.bak,error.log">Carregando...</div>
+        <div class="progress"></div>
+    </div>
+    <div class="progress-bar" id="progress5">
+        <div class="file-name" id="fileName5" data-files="plasma_shard.tif,databreach.dmg,cybernetic.h,xr1ft.bat,urban_shadow.xml,cybergrid.img,brainload.sys,hack_core.bak,darklink.exe,neontrap.log,datatide.bin,temp_stack.tmp,virtualpatch.dll,hackwave.bat,tracefile.log,ai_error.sys,plasma_mem.iso,nanoshift.ini,datapool.bak,hack_rig.bat,neonwave.old,darktrace.img,core_dump.txt,cacheflow.bin,trace_cache.dll,initflux.msi,sparkdrive.sys,darkmatrix.bat,holo_core.exe,tempdata.ini">Preparando...</div>
+        <div class="progress"></div>
+    </div>
+    <div class="progress-bar" id="progress6">
+        <div class="file-name" id="fileName6" data-files="brainwave_00.bin,neon_void.md,quantum_flux.gif,mech_code.css,neural-sync.cpp,cybergrid.reg,core_dump.msi,digital_mind.iso,plasma_drive.old,ghost_patch.sys,datashift.img,neon.exe,coretrace.bak,hackfile.pak,init_cache.tmp,datastream.sys,shadow_boot.dll,neonload.bat,errorstream.txt,hack_core.ini,cyberdata.msi,tempflux.log,quantum_run.sys,neonwarp.old,hologram.img,glitchlink.exe,datacore.tmp,darktrace.sys,cache_sys.bak">Finalizando...</div>
+        <div class="progress"></div>
+    </div>
+    <div class="progress-bar seventh" id="progress7">
+        <div class="file-name" id="fileName7" data-files="biochip_core.php,code_dark.asp,matrix_hack.iso,synthetic.elf,zenith4d.js,digitalflux.img,neonshock.msi,hackbot.dll,neurodrive.iso,trace_link.sys,cyberlink.ini,holo.exe,init_warp.bak,datastream.dll,shadow_core.bat,glitch_data.img,hackmem.sys,neontrace.pak,darkshock.old,tracewave.log,cyberpatch.sys,flux.exe,hackpath.dll,dumpcode.bat,digitalwave.bin,neonmatrix.msi,error_data.sys,quantumdrive.iso,virtualcore.ini">Ajustando...</div>
+        <div class="progress"></div>
+    </div>
+    <div class="progress-bar rainbow" id="progress8">
+        <div class="file-name" id="fileName8" data-files="overdrive.psd,horizon.zip,voidwalk.svg,neon_warrior.obj,data_wipe.exe,mechrun.img,cyberwarp.sys,neuralhack.dll,traceback.bak,cybercore.msi,datapatch.iso,neonwave.log,quantumflux.sys,ai_core.ini,darklink.msi,plasmaflux.exe,tracecode.dll,cyberdrive.old,neonblade.img,shadowpath.bak,cyberwarp.sys,datashift.exe,quantumlink.dll,holo_drive.img,darklink.iso,virtualpatch.dll,neonstorm.sys,mechcore.bat,cyberwave.iso,datastream.log">Redirecionando...</div>
+        <div class="progress"></div>
+    </div>
+</div>
+
+<script>
+    function loadProgressBar(barId, fileNamesId, duration, callback) {
+        const progressBar = document.getElementById(barId).querySelector('.progress');
+        const fileNameDisplay = document.getElementById(fileNamesId);
+        if (!fileNameDisplay) {
+            console.error(`Elemento com ID ${fileNamesId} não encontrado.`);
+            return;
+        }
+        const fileArray = fileNameDisplay.getAttribute('data-files').split(',');
+        const totalFiles = fileArray.length;
+
+        // Ajuste o tempo para cada nome
+        const timePerFile = duration / totalFiles;
+
+        let width = 0;
+        let fileIndex = 0;
+
+        const interval = setInterval(() => {
+            width += 100 / totalFiles; // Incremento proporcional ao número de arquivos
+            progressBar.style.width = width + '%';
+
+            if (fileIndex < totalFiles) {
+                fileNameDisplay.textContent = fileArray[fileIndex];
+                fileIndex++;
+            }
+
+            if (width >= 100) {
+                clearInterval(interval);
+                if (callback) callback();
+            }
+        }, timePerFile);
+    }
+
+    function startLoading() {
+        loadProgressBar('progress1', 'fileName1', 6000, () => {
+            loadProgressBar('progress2', 'fileName2', 6000, () => {
+                loadProgressBar('progress3', 'fileName3', 6000, () => {
+                    loadProgressBar('progress4', 'fileName4', 6000, () => {
+                        loadProgressBar('progress5', 'fileName5', 6000, () => {
+                            loadProgressBar('progress6', 'fileName6', 6000, () => {
+                                loadProgressBar('progress7', 'fileName7', 6000, () => {
+                                    loadProgressBar('progress8', 'fileName8', 10000, () => {
+                                        // Redirecionar para outra página após conclusão
+                                        window.location.href = 'safirabotofc.html'    });
+                                });
+                            });
+                        });
+                    });
+                });
+            });
+        });
+    }
+
+    // Adiciona a funcionalidade ao botão para iniciar o carregamento e a música
+    document.getElementById('startButton').addEventListener('click', function() {
+        this.classList.add('clicked');
+        startLoading();
+
+        // Toca a música
+        var audio = new Audio('https://github.com/legado2603/music/raw/main/Yu%20Yu%20Hakusho%20Music-%20Battle%20Time_mixed.mp3');
+        audio.play();
+    });
+</script>
+
+</body>
+</html>

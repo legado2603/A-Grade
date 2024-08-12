@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="5;
+        url=index.html">
+    <title>Efeito Matrix</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: black;
+        }
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="matrix-canvas"></canvas>
+    <script>
+        const canvas = document.getElementById("matrix-canvas");
+        const ctx = canvas.getContext("2d");
+        const fontSize = 21;
+        const letters = "靈魂之光淨化身體，心靈平靜平衡存在";
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        function createMatrixEffect() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.font = `${fontSize}px Arial`;
+            ctx.fillStyle = "violet"; // Cor verde
+
+            for (let i = 0; i < canvas.width / fontSize; i++) {
+                const text = letters[Math.floor(Math.random() * letters.length)];
+                const x = i * fontSize;
+                const y = Math.random() * canvas.height;
+                ctx.fillText(text, x, y);
+
+                // Adicione um efeito de desvanecimento
+                ctx.fillStyle = `rgba(238, 130, 238, ${Math.random() * 0.7})`;
+                ctx.fillRect(x, y - fontSize, fontSize, fontSize);
+            }
+        }
+
+        window.addEventListener("resize", () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+
+        setInterval(createMatrixEffect, 100); // Atualiza o efeito a cada 100 ms
+        
+    </script>
+</body>
+</html>

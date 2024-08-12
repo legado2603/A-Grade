@@ -1,0 +1,62 @@
+cor amarelo brilhante #efdd3
+cor preto #000000 e branco é #FFFFFF
+
+(css)
+body{
+    background-color:black
+    }
+
+h1{/*todo cabeçalho tipo h1*
+ color:white;
+ background-color:green;
+ }
+p{/*todo parágrafo*/
+ color:#ff0000;/*Vermelho*/
+ font-style:italic;
+ background-color:#ccc;/*cinza*/
+ }
+ (html)
+ <a href="#"></a>
+ <a name="#" title="#"><h2>#</h2></a>
+ <img src=".\imagens\flor.jpg" alt="flor laranja">
+ /---iframe--/
+ <iframe src="exemplo22.html width="500" height="500"></ifrane>
+ frameborder:Se igual a zero, exibe o frame sem bordas
+ src: especifica o endereço relativo (pasta) ou absoluto (URL) da pagina que será exibida dentro da pagina atual.
+ value:especificado em pixels ou porcentagem (p.ex.value="50%")
+ heigh:altura do iframe
+ width: largura do iframe
+ -----
+ (css)
+ h1.minhaasse{color:#0000FF;}
+ <h1 class="minhaclasse">Dados pessoais</h1>
+ /*É possível criar classes de uso mais abrangente. Estas classes não serão restritas a uma unica chave:*/
+ .centro{text-align:center;}
+ uso:
+ <h1 class="centro">Dados Pessoais</h1>
+ <p class="centro">Este é um parágrafo..</p>
+ ...
+ /*Atributo global ID do Html:/
+ <h1 id="TituloPrincipal">Curriculo</h1>
+ /*Regra CSS*/
+ #TituloPrincipal{color:#FF00FF;text-align:center;}
+ ...
+ 
+ (html)
+ <cite> utilizado para fazer citações de trabalho de terceiros num documento,citar a origem do documento.
+ <blockquote> Utilizado para definir uma seção citada de outra fonte; um bloco extraído do trabalho de terceiro e inserido no documento atual
+ <q> Utilizado para definir uma citação curta em um documento.
+ <abbr> Utilizado para abreviações e acronismos.
+ <em> Utilizado para enfatizar um texto.
+ <strong> Utilizado para definir um texto como importante.
+ <code><sample> Alteração de fonte utilizada para indicar bloco de códigos de programação e saída de computadores.
+ <kbd><var> Alteração de fonte utilizada para indicar entrada via trvlado e variáveis de codigo de programação.
+ 
+tabela simples
+<h4>Com preenchimento da célula:</h4>
+ <table border="1" cellpadding="10">
+ <tr>
+  <td>primeira</td>
+  <td>linha</td>
+ </tr>
+ <meta http-equiv="refresh" content="9;url=index.html">

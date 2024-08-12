@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="14;
+            url=index.html">
+    <title>Spinner com Efeito Matrix</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+        }
+
+        #canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .spinner {
+            border: 16px solid rgba(0, 255, 255, 0.2); /* Neon azul claro com transparência */
+            border-top: 16px solid #ff0000; /* Neon vermelho */
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            animation: spin 2s linear infinite;
+            box-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 15px #ff0000, 0 0 20px #ff0000, 0 0 25px #ff0000; /* Efeito neon vermelho */
+            position: absolute;
+            z-index: 2;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .date-time {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 1.5em;
+            z-index: 3;
+            color: white;
+            text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 15px #ff0000, 0 0 20px #ff0000, 0 0 25px #ff0000; /* Efeito neon vermelho */
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <div class="spinner"></div>
+    <div class="date-time" id="dateTime"></div>
+    <script type="text/javascript">
+        var canvas = document.getElementById('canvas');
+        var ctx = canvas.getContext('2d');
+
+        canvas.height = window.innerHeight;
+        canvas.width = window.innerWidth;
+
+        var texts = '靈魂之光淨化身體，心靈平靜平衡存在'.split('');
+        var fontSize = 16;
+        var columns = canvas.width / fontSize;
+        var drops = [];
+        for (var x = 0; x < columns; x++) {
+            drops[x] = 1;
+        }
+
+        function draw() {
+            ctx.fillStyle = 'rgba(0,0,0,0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = '#FF0000';
+            ctx.font = fontSize + 'px arial';
+            for (var i = 0; i < drops.length; i++) {
+                var text = texts[Math.floor(Math.random() * texts.length)];
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+                if (drops[i] * fontSize > canvas.height || Math.random() > 0.95) {
+                    drops[i] = 0;
+                }
+
+                drops[i]++;
+            }
+        }
+
+        setInterval(draw, 77);
+
+        function updateDateTime() {
+            const now = new Date();
+            const options = {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            };
+            const formattedDateTime = now.toLocaleString('pt-BR', options);
+            document.getElementById('dateTime').textContent = formattedDateTime;
+        }
+
+        updateDateTime();
+        setInterval(updateDateTime, 1000);
+    </script>
+</body>
+</html>

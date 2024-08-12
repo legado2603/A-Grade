@@ -1,0 +1,18 @@
+{
+  "comandos": {
+    "/?": "Mostra uma lista de todos os comandos disponíveis.\najuda,\ncss,\njavascript,\nhtml,\nbomdia,\nboatarde,\nboanoite,\nboomadrugada,\ntudobem,\nfirebase,\nbancodados,\nsafira,\nusuarios",
+    "ajuda": "A Grade é um projeto inovador e futurista. Estou aqui para ajudar a orientá-lo e responder a qualquer dúvida que você tenha sobre a nossa plataforma e seus recursos.",
+    "css": "CSS, ou Cascading Style Sheets, é uma linguagem usada para descrever a apresentação de um documento escrito em HTML. Ele controla a aparência visual das páginas web.",
+    "javascript": "JavaScript é uma linguagem de programação que permite adicionar interatividade e dinamismo às páginas web. É essencial para criar aplicações web modernas.",
+    "html": "HTML, ou HyperText Markup Language, é a linguagem de marcação usada para criar e estruturar conteúdo na web. Ele define a estrutura básica das páginas web.",
+    "bomdia": "Bom dia! Como posso ajudá-lo hoje?",
+    "boatarde": "Boa tarde! Em que posso ser útil agora?",
+    "boanoite": "Boa noite! Se precisar de algo, estou à disposição.",
+    "boomadrugada": "Boa madrugada! Caso tenha alguma dúvida ou precise de ajuda, estarei aqui.",
+    "tudobem": "Tudo bem, sim! E com você? Como posso ajudar?",
+    "firebase": "Firebase é uma plataforma de desenvolvimento de aplicativos móveis e web desenvolvida pelo Google. Ela fornece uma variedade de serviços, como banco de dados em tempo real e autenticação.",
+    "bancodados": "O banco de dados da Grade é construído com tecnologias avançadas para garantir a integridade e a segurança dos dados dos nossos usuários.",
+    "safira": "O nome 'Safira' foi escolhido em homenagem à gema mística e poderosa encontrada no filme Eragon. Assim como a gema, desejo ser uma fonte de conhecimento e orientação.",
+    "usuarios": "Os usuários da Grade são fundamentais para a evolução do conhecimento da Safira. Eles contribuem com insights e feedback que ajudam a aprimorar continuamente a nossa plataforma."
+  }
+}

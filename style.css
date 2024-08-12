@@ -1,0 +1,267 @@
+.container > div {
+border-right: 1px solid #ccc; /* Adiciona uma linha visível à direita de cada coluna */
+}
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+color:#add8e6;
+background-image: url('21d07158420bbab94259cddfdc47cec3.jpg');
+background-color: #f0f0f0;
+}
+.container {
+display: grid;
+grid-template-columns: auto 1fr auto; /* Divide em três colunas: auto (barra lateral), 1fr (conteúdo principal), auto (espaço extra) */
+grid-template-rows: auto 1fr;
+min-height: 100vh;
+
+}
+.header {
+grid-column: 1 / 4; /* Ocupa todas as três colunas */
+background-image: url('agrade.png');  /* Imagem de fundo para o cabeçalho */
+background-size: cover;
+background-position: center;
+color: #add8e6;
+padding: 20px;
+}
+.sidebar {
+    grid-column: 1; /* Ocupa a primeira coluna */
+    grid-row: 2 / 3; /* Ocupa da segunda linha até o final */
+    background-image: url('caminho/para/sua/imagem_sidebar.jpg'); /* Imagem de fundo para a barra lateral */
+    background-size: cover;
+    color: #add8e6;
+    padding: 1px;
+    overflow: hidden; /* Oculta o conteúdo que excede a área */
+    transition: width 0.5s; /* Transição suave da largura */
+    width: 0; /* Largura inicial da barra lateral (oculta) */
+}
+
+.sidebar.show-sidebar {
+    width: 200px; /* Largura da barra lateral quando estiver visível */
+}
+
+.content {
+    margin-left: 0; /* Sem espaço para o conteúdo principal inicialmente */
+    transition: margin-left 0.5s; /* Transição suave do espaçamento */
+}
+
+.content.expand-content {
+    margin-left: 200px; /* Espaço para o conteúdo principal quando a sidebar está visível */
+}
+.extra-space {
+grid-column: 3; /* Ocupa a terceira coluna */
+grid-row: 2 / 3; /* Ocupa da segunda linha até o final */
+background-image: url('caminho/para/sua/imagem_extra_space.jpg'); /* Imagem de fundo para o espaço extra */
+background-size: cover;
+padding: 100px;
+}
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 21%;
+  background-color: black; /* Cor de fundo temporária */
+  margin: 20px;
+  background-size: cover; /* Para garantir que a imagem ocupe todo o espaço */
+  background-position: center; /* Para centralizar a imagem */
+}
+.hide-text {
+color: transparent; /* Torna o texto transparente quando a barra lateral está oculta */
+}
+.toggle-button {
+border-radius: 50%; /* Faz o botão redondo */
+padding: 10px; /* Ajusta o espaçamento interno do botão */
+background-color: rgba(0, 0, 0, 0.3);; /* Cor de fundo do botão */
+border: 7px; /* Remove a borda do botão */
+color:yellow;
+cursor: pointer; /* Muda o cursor para indicar que o botão é clicável */
+transition: background-color 0.3s; /* Adiciona uma transição suave para a cor de fundo */
+}
+.toggle-button {
+border-radius: 50%;
+padding: 10px;
+background-color:rgba(0, 0, 0, 0.3);;
+border: none;
+cursor: pointer;
+transition: background-color 0.3s;
+position: relative; /* Adiciona posicionamento relativo */
+z-index: 1000; /* Define um índice z alto */
+}
+
+.config-panel {
+display: none; /* Inicialmente oculta */
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+color: #add8e6;
+background-color: rgba(0, 0, 0, 0.9);
+z-index: 999;
+justify-content: center;
+align-items: center;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+    margin: 15% auto;
+    padding: 20px;
+    width: 70%;
+    background-color: #fefefe;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.h1
+{
+ color:#add8e6;
+
+}
+        .marquee {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            box-sizing: border-box;
+            color:yellow;
+        }
+
+        .marquee span {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 21s linear infinite, delay 3s steps(1) infinite;
+        }
+
+        @keyframes marquee {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
+        }
+         body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Estilo do botão */
+        .open-button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: yellow;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 50px;
+            font-size: 16px;
+        }
+
+        /* Estilo do modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .modal-content {
+            background-color: rgba(50, 50, 50, 0.8);
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            border-radius: 10px;
+            color: white;
+        }
+
+        /* Estilo do chat */
+        .chat {
+            max-height: 300px;
+            overflow-y: auto;
+            padding: 10px;
+        }
+
+        .chat-message {
+            margin: 10px 0;
+        }
+
+        .user-message {
+            color: lightblue;
+            text-align: right;
+        }
+
+        .bot-message {
+            color: yellow;
+            text-align: left;
+        }
+
+        /* Estilo do campo de entrada */
+        .chat-input {
+            width: 90%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: none;
+
+            color:red;
+        }
+
+        .chat-button {
+            padding: 10px;
+            background-color: black;
+            border: none;
+            cursor: pointer;
+            border-radius: 50px;
+            margin-top: 10px;
+            color: green;
+        }
+                /* CSS para o efeito de chamas amarelas */
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto; /* Centraliza a logo horizontalmente */
+            filter: 
+                drop-shadow(0 0 3px #ffcc00) /* Chamas amarelas com menor intensidade */
+                drop-shadow(0 0 6px #ffcc00);
+            animation: flame 1.5s infinite alternate;
+        }
+
+        @keyframes flame {
+            0% {
+                filter: 
+                    drop-shadow(0 0 3px #ffcc00) 
+                    drop-shadow(0 0 6px #ffcc00);
+            }
+            50% {
+                filter: 
+                    drop-shadow(0 0 4px #ffcc00) 
+                    drop-shadow(0 0 8px #ffcc00);
+            }
+            100% {
+                filter: 
+                    drop-shadow(0 0 6px #ffcc00) 
+                    drop-shadow(0 0 10px #ffcc00);
+            }
+        }

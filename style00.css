@@ -1,0 +1,114 @@
+body {
+    background: #000;
+    color: #fff;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.box-mestre {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+#accordion {
+    display: none;
+}
+
+.neon-button {
+    display: block;
+    margin: 5px 0;
+    padding: 10px;
+    background: #111;
+    border: 1px solid #444;
+    cursor: pointer;
+}
+
+.neon-button:hover {
+    outline: 2px solid red;
+    box-shadow: 0 0 10px red;
+}
+
+.neon-button-yellow {
+    display: block;
+    margin: 5px 0;
+    padding: 10px;
+    background: #111;
+    border: 1px solid #444;
+    cursor: pointer;
+}
+
+.neon-button-yellow:hover {
+    outline: 2px solid yellow;
+    box-shadow: 0 0 10px yellow;
+}
+
+.modal {
+    display: none;
+    background: #222;
+    border: 1px solid red;
+    padding: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    animation: neonFire 1.5s infinite alternate;
+}
+
+@keyframes neonFire {
+    0% { border-color: #ff5555; box-shadow: 0 0 20px #ff5555; }
+    50% { border-color: #ff3333; box-shadow: 0 0 20px #ff3333; }
+    100% { border-color: #ff0000; box-shadow: 0 0 20px #ff0000; }
+}
+
+.tooltip {
+    position: absolute;
+    background: #444;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: none;
+}
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #111;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+.tab {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.tab:hover {
+    background: #222;
+}
+
+.tab-content {
+    display: none;
+    background: #333;
+    padding: 10px;
+    position: fixed;
+    bottom: 50px;
+    width: 100%;
+}
+
+#tab-contents .tab-content.active {
+    display: block;
+}
+
+body::before {
+    content: "";
+    background: url('your-image.jpg') fixed;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    background-attachment: fixed;
+    background-size: cover;
+}
