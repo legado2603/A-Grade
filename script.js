@@ -110,7 +110,7 @@ document.getElementById("outroBotao6").addEventListener("click", function() {
   window.location.href = "sobre.html"; // Substitua pela URL desejada
 });
 document.getElementById("outroBotao7").addEventListener("click", function() {
-  window.location.href = "/starmusic/player.html"; // Substitua pela URL desejada
+  window.location.href = "/A-Grade/starmusic/player.html"; // Substitua pela URL desejada
 });
 
 
