@@ -1,0 +1,541 @@
+{
+  "genres": [
+    {
+      "name": "Rock",
+      "artists": [
+        {
+          "name": "Artista 1",
+          "albums": [
+            {
+              "name": "Álbum 1",
+              "tracks": [
+                { "name": "Faixa 1", "url": "https://example.com/music/rock/artist1/album1/track1.mp3" },
+                { "name": "Faixa 2", "url": "https://example.com/music/rock/artist1/album1/track2.mp3" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pop",
+      "artists": [
+        {
+          "name": "Artista 2",
+          "albums": [
+            {
+              "name": "Álbum 2",
+              "tracks": [
+                { "name": "Faixa 1", "url": "https://example.com/music/pop/artist2/album2/track1.mp3" },
+                { "name": "Faixa 2", "url": "https://example.com/music/pop/artist2/album2/track2.mp3" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Jazz",
+      "artists": [
+        {
+          "name": "Artista 3",
+          "albums": [
+            {
+              "name": "Álbum 3",
+              "tracks": [
+                { "name": "Faixa 1", "url": "https://example.com/music/jazz/artist3/album3/track1.mp3" },
+                { "name": "Faixa 2", "url": "https://example.com/music/jazz/artist3/album3/track2.mp3" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Classical",
+      "artists": [
+        {
+          "name": "Artista 4",
+          "albums": [
+            {
+              "name": "Álbum 4",
+              "tracks": [
+                { "name": "Faixa 1", "url": "https://example.com/music/classical/artist4/album4/track1.mp3" },
+                { "name": "Faixa 2", "url": "https://example.com/music/classical/artist4/album4/track2.mp3" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Hip Hop",
+      "artists": [
+        {
+          "name": "Artista 5",
+          "albums": [
+            {
+              "name": "Álbum 5",
+              "tracks": [
+                { "name": "Faixa 1", "url": "https://example.com/music/hiphop/artist5/album5/track1.mp3" },
+                { "name": "Faixa 2", "url": "https://example.com/music/hiphop/artist5/album5/track2.mp3" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Country",
+      "artists": [
+        {
+          "name": "Artista 6",
+          "albums": [
+            {
+              "name": "Álbum 6",
+              "tracks": [
+                { "name": "Faixa 1", "url": "https://example.com/music/country/artist6/album6/track1.mp3" },
+                { "name": "Faixa 2", "url": "https://example.com/music/country/artist6/album6/track2.mp3" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Electronic",
+      "artists": [
+        {
+          "name": "Artista 7",
+          "albums": [
+            {
+              "name": "Álbum 7",
+              "tracks": [
+                { "name": "Faixa 1", "url": "https://example.com/music/electronic/artist7/album7/track1.mp3" },
+                { "name": "Faixa 2", "url": "https://example.com/music/electronic/artist7/album7/track2.mp3" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Reggae",
+      "artists": [
+        {
+          "name": "Artista 8",
+          "albums": [
+            {
+              "name": "Álbum 8",
+              "tracks": [
+                { "name": "Faixa 1", "url": "https://example.com/music/reggae/artist8/album8/track1.mp3" },
+                { "name": "Faixa 2", "url": "https://example.com/music/reggae/artist8/album8/track2.mp3" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Blues",
+      "artists": [
+        {
+          "name": "Artista 9",
+          "albums": [
+            {
+              "name": "Álbum 9",
+              "tracks": [
+                { "name": "Faixa 1", "url": "https://example.com/music/blues/artist9/album9/track1.mp3" },
+                { "name": "Faixa 2", "url": "https://example.com/music/blues/artist9/album9/track2.mp3" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Soul",
+      "artists": [
+        {
+          "name": "Artista 10",
+          "albums": [
+            {
+              "name": "Álbum 10",
+              "tracks": [
+                { "name": "Faixa 1", "url": "https://example.com/music/soul/artist10/album10/track1.mp3" },
+                { "name": "Faixa 2", "url": "https://example.com/music/soul/artist10/album10/track2.mp3" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Folk",
+      "artists": [
+        {
+          "name": "Artista 11",
+          "albums": [
+            {
+              "name": "Álbum 11",
+              "tracks": [
+                { "name": "Faixa 1", "url": "https://example.com/music/folk/artist11/album11/track1.mp3" },
+                { "name": "Faixa 2", "url": "https://example.com/music/folk/artist11/album11/track2.mp3" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Alternative",
+      "artists": [
+        {
+          "name": "Artista 12",
+          "albums": [
+            {
+              "name": "Álbum 12",
+              "tracks": [
+                { "name": "Faixa 1", "url": "https://example.com/music/alternative/artist12/album12/track1.mp3" },
+                { "name": "Faixa 2", "url": "https://example.com/music/alternative/artist12/album12/track2.mp3" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Metal",
+      "artists": [
+        {
+          "name": "Artista 13",
+          "albums": [
+            {
+              "name": "Álbum 13",
+              "tracks": [
+                { "name": "Faixa 1", "url": "https://example.com/music/metal/artist13/album13/track1.mp3" },
+                { "name": "Faixa 2", "url": "https://example.com/music/metal/artist13/album13/track2.mp3" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Punk",
+      "artists": [
+        {
+          "name": "Artista 14",
+          "albums": [
+            {
+              "name": "Álbum 14",
+              "tracks": [
+                { "name": "Faixa 1", "url": "https://example.com/music/punk/artist14/album14/track1.mp3" },
+                { "name": "Faixa 2", "url": "https://example.com/music/punk/artist14/album14/track2.mp3" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "R&B",
+      "artists": [
+        {
+          "name": "Artista 15",
+          "albums": [
+            {
+              "name": "Álbum 15",
+              "tracks": [
+                { "name": "Faixa 1", "url": "https://example.com/music/rb/artist15/album15/track1.mp3" },
+                { "name": "Faixa 2", "url": "https://example.com/music/rb/artist15/album15/track2.mp3" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+  "name": "Gospel",
+  "artists": [
+    {
+      "name": "Diante do Trono",
+      "albums": [
+        {
+          "name": "Preciso de Ti",
+          "tracks": [
+            { "name": "Conhecerei", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Diante%20do%20trono%20-%20%20Preciso%20de%20ti/Diante%20do%20Trono%20-%20Conhecerei%20_%20(CD%20_DT4%20Preciso%20de%20Ti_%20-%202001).m4a" },
+            { "name": "Coração igual ao teu", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Diante%20do%20trono%20-%20%20Preciso%20de%20ti/Diante%20do%20Trono%20-%20Cora%C3%A7%C3%A3o%20Igual%20ao%20Teu%20_%20(CD%20_DT4%20Preciso%20de%20Ti_%20-%202001).m4a" },
+            { "name": "Deus de milagres", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Diante%20do%20trono%20-%20%20Preciso%20de%20ti/Diante%20do%20Trono%20-%20Deus%20de%20Milagres%20_%20(CD%20_DT4%20Preciso%20de%20Ti_%20-%202001).m4a" },
+            { "name": "Em teus Átrios", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Diante%20do%20trono%20-%20%20Preciso%20de%20ti/Diante%20do%20Trono%20-%20Em%20Teus%20%C3%81trios%20_%20(CD%20_DT4%20Preciso%20de%20Ti_%20-%202001)%20(1).m4a" },
+            
+            { "name": "Em toda terra", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Diante%20do%20trono%20-%20%20Preciso%20de%20ti/Diante%20do%20Trono%20-%20Em%20Toda%20Terra%20_%20(CD%20_DT4%20Preciso%20de%20Ti_%20-%202001).m4a" },
+            { "name": "Insaciável", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Diante%20do%20trono%20-%20%20Preciso%20de%20ti/Diante%20do%20Trono%20-%20Insaci%C3%A1vel%20_%20(CD%20_DT4%20Preciso%20de%20Ti_%20-%202001).m4a" },
+            { "name": "Leva-me", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Diante%20do%20trono%20-%20%20Preciso%20de%20ti/Diante%20do%20Trono%20-%20Leva-me%20_%20(CD%20_DT4%20Preciso%20de%20Ti_%20-%202001).m4a" },
+            { "name": "Mais do que tudo", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Diante%20do%20trono%20-%20%20Preciso%20de%20ti/Diante%20do%20Trono%20-%20Mais%20do%20Que%20Tudo%20_%20(CD%20_DT4%20Preciso%20de%20Ti_%20-%202001).m4a" },
+            { "name": "Ouve,Senhor", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Diante%20do%20trono%20-%20%20Preciso%20de%20ti/Diante%20do%20Trono%20-%20Ouve,%20Senhor%20_%20(CD%20_DT4%20Preciso%20de%20Ti_%20-%202001).m4a" },
+            { "name": "Preciso de Ti", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Diante%20do%20trono%20-%20%20Preciso%20de%20ti/Diante%20do%20Trono%20-%20Preciso%20de%20Ti%20_%20(CD%20_DT4%20Preciso%20de%20Ti_%20-%202001).m4a" }
+            
+          ]
+        },
+        {
+          "name": "Esperança",
+          "tracks": [
+            { "name": "A cada manhã", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Diante%20do%20trono%20-%20Esperan%C3%A7a/A%20Cada%20Manh%C3%A3%20_%20CD%20Esperan%C3%A7a%20Ao%20Vivo%20_%20Diante%20do%20Trono%20(DT07).m4a" },
+            { "name": "Descanso em Deus", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Diante%20do%20trono%20-%20Esperan%C3%A7a/Descanso%20em%20Deus%20_%20CD%20Esperan%C3%A7a%20Ao%20Vivo%20_%20Diante%20do%20Trono%20(DT07).m4a" },
+            { "name": "Eis-me aqui", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Diante%20do%20trono%20-%20Esperan%C3%A7a/Eis-Me%20Aqui%20_%20CD%20Esperan%C3%A7a%20Ao%20Vivo%20_%20Diante%20do%20Trono%20(DT07).m4a" },
+            { "name": "Esperança", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Diante%20do%20trono%20-%20Esperan%C3%A7a/Esperan%C3%A7a%20_%20CD%20Esperan%C3%A7a%20Ao%20Vivo%20_%20Diante%20do%20Trono%20(DT07).m4a" },
+            { "name": "Isaías 53", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Diante%20do%20trono%20-%20Esperan%C3%A7a/Isa%C3%ADas%2053%20_%20CD%20Esperan%C3%A7a%20Ao%20Vivo%20_%20Diante%20do%20Trono%20(DT07).m4a" },
+            { "name": "Meu filho não temas", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Diante%20do%20trono%20-%20Esperan%C3%A7a/Meu%20Filho%20N%C3%A3o%20Temas%20_%20CD%20Esperan%C3%A7a%20Ao%20Vivo%20_%20Diante%20do%20Trono%20(DT07).m4a" },
+            { "name": "Quando a tempestade vem", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Diante%20do%20trono%20-%20Esperan%C3%A7a/Quando%20a%20Tempestade%20Vem%20_%20CD%20Esperan%C3%A7a%20Ao%20Vivo%20_%20Diante%20do%20Trono%20(DT07).m4a" },
+            { "name": "Quem é Deus como o nosso Deus", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Diante%20do%20trono%20-%20Esperan%C3%A7a/Quem%20%C3%A9%20Deus%20Como%20Nosso%20Deus_%20_%20CD%20Esperan%C3%A7a%20Ao%20Vivo%20_%20Diante%20do%20Trono%20(DT07).m4a" },
+            { "name": "Salvador", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Diante%20do%20trono%20-%20Esperan%C3%A7a/Salvador%20_%20CD%20Esperan%C3%A7a%20Ao%20Vivo%20_%20Diante%20do%20Trono%20(DT07).m4a" },
+            
+            { "name": "Tu és a minha Coroa", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Diante%20do%20trono%20-%20Esperan%C3%A7a/Tu%20%C3%89s%20a%20Minha%20Coroa%20_%20CD%20Esperan%C3%A7a%20Ao%20Vivo%20_%20Diante%20do%20Trono%20(DT07).m4a" },
+            { "name": "Tua presença", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Diante%20do%20trono%20-%20Esperan%C3%A7a/Tua%20Presen%C3%A7a%20_%20CD%20Esperan%C3%A7a%20Ao%20Vivo%20_%20Diante%20do%20Trono%20(DT07).m4a" }
+          ]
+        },
+        {
+          "name": "Nos Braços do Pai",
+          "tracks": [
+            { "name": "Abertura", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Diante%20do%20trono%20-%20Nos%20Bra%C3%A7os%20do%20pai/Diante%20do%20Trono%20-%20Abertura%20_%20(CD%20_DT5%20Nos%20Bra%C3%A7os%20do%20Pai_%20-%202002).m4a" },
+            { "name": "Amigo", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Diante%20do%20trono%20-%20Nos%20Bra%C3%A7os%20do%20pai/Diante%20do%20Trono%20-%20Amigo%20_%20(CD%20_DT5%20Nos%20Bra%C3%A7os%20do%20Pai_%20-%202002).m4a" },
+            { "name": "Brasil", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Diante%20do%20trono%20-%20Nos%20Bra%C3%A7os%20do%20pai/Diante%20do%20Trono%20-%20Brasil%20_%20(CD%20_DT5%20Nos%20Bra%C3%A7os%20do%20Pai_%20-%202002).m4a" },
+            { "name": "Cântico Espontâneo", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Diante%20do%20trono%20-%20Nos%20Bra%C3%A7os%20do%20pai/Diante%20do%20Trono%20-%20C%C3%A2ntico%20Espont%C3%A2neo%20_%20(CD%20_DT5%20Nos%20Bra%C3%A7os%20do%20Pai_%20-%202002).m4a" },
+            { "name": "De todo o coração", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Diante%20do%20trono%20-%20Nos%20Bra%C3%A7os%20do%20pai/Diante%20do%20Trono%20-%20De%20Todo%20o%20Cora%C3%A7%C3%A3o%20_%20(CD%20_DT5%20Nos%20Bra%C3%A7os%20do%20Pai_%20-%202002).m4a" },
+            { "name": "Eu sou do meu amado", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Diante%20do%20trono%20-%20Nos%20Bra%C3%A7os%20do%20pai/Diante%20do%20Trono%20-%20Eu%20Sou%20do%20Meu%20Amado%20_%20(CD%20_DT5%20Nos%20Bra%C3%A7os%20do%20Pai_%20-%202002).m4a" },
+            { "name": "Invoca-me", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Diante%20do%20trono%20-%20Nos%20Bra%C3%A7os%20do%20pai/Diante%20do%20Trono%20-%20Invoca-me%20_%20(CD%20_DT5%20Nos%20Bra%C3%A7os%20do%20Pai_%20-%202002).m4a" },
+            { "name": "No teu altar", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Diante%20do%20trono%20-%20Nos%20Bra%C3%A7os%20do%20pai/Diante%20do%20Trono%20-%20No%20Teu%20Altar%20_%20(CD%20_DT5%20Nos%20Bra%C3%A7os%20do%20Pai_%20-%202002).m4a" },
+            { "name": "Nos braços do Pai", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Diante%20do%20trono%20-%20Nos%20Bra%C3%A7os%20do%20pai/Diante%20do%20Trono%20-%20Nos%20Bra%C3%A7os%20do%20Pai%20_%20(CD%20_DT5%20Nos%20Bra%C3%A7os%20do%20Pai_%20-%202002).m4a" },
+            { "name": "Tua Chuva", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Diante%20do%20trono%20-%20Nos%20Bra%C3%A7os%20do%20pai/Diante%20do%20Trono%20-%20Tua%20Chuva%20_%20(CD%20_DT5%20Nos%20Bra%C3%A7os%20do%20Pai_%20-%202002).m4a" },
+            { "name": "Vem de ti, Senhor", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Diante%20do%20trono%20-%20Nos%20Bra%C3%A7os%20do%20pai/Diante%20do%20Trono%20-%20Vem%20de%20Ti%2C%20Senhor%20_%20(CD%20_DT5%20Nos%20Bra%C3%A7os%20do%20Pai_%20-%202002).m4a" }
+            
+          ]
+        },
+        {
+          "name": "Águas Purificadoras",
+          "tracks": [
+            { "name": "A vitoria da Cruz", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Diante%20do%20trono%20-%20%C3%81guas%20purificadoras/Diante%20do%20Trono%20-%20A%20Vit%C3%B3ria%20da%20Cruz%20_%20(CD%20_DT3%20%C3%81guas%20Purificadoras_%20-%202000).m4a" },
+            { "name": "Abertura", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Diante%20do%20trono%20-%20%C3%81guas%20purificadoras/Diante%20do%20Trono%20-%20Abertura%20_%20(CD%20_DT3%20%C3%81guas%20Purificadoras_%20-%202000).m4a" },
+            { "name": "Deus Fiel", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Diante%20do%20trono%20-%20%C3%81guas%20purificadoras/Diante%20do%20Trono%20-%20Deus%20Fiel%20_%20(CD%20_DT3%20%C3%81guas%20Purificadoras_%20-%202000).m4a" },
+            { "name": "Eu quero o avivamento", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Diante%20do%20trono%20-%20%C3%81guas%20purificadoras/Diante%20do%20Trono%20-%20Eu%20Quero%20o%20Avivamento%20_%20(CD%20_DT3%20%C3%81guas%20Purificadoras_%20-%202000).m4a" },
+            { "name": "O Bálsamo de Gileade", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Diante%20do%20trono%20-%20%C3%81guas%20purificadoras/Diante%20do%20Trono%20-%20O%20B%C3%A1lsamo%20de%20Gileade%20_%20(CD%20_DT3%20%C3%81guas%20Purificadoras_%20-%202000).m4a" },
+            { "name": "O cheiro das águas", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Diante%20do%20trono%20-%20%C3%81guas%20purificadoras/Diante%20do%20Trono%20-%20O%20Cheiro%20das%20%C3%81guas%20_%20(CD%20_DT3%20%C3%81guas%20Purificadoras_%20-%202000).m4a" },
+            { "name": "O Espírito e a Noiva dizem Vem", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Diante%20do%20trono%20-%20%C3%81guas%20purificadoras/Diante%20do%20Trono%20-%20O%20Esp%C3%ADrito%20e%20a%20Noiva%20Dizem%20Vem%20_%20(CD%20_DT3%20%C3%81guas%20Purificadoras_%20-%202000).m4a" },
+            { "name": "Quando Deus escolhe alguém", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Diante%20do%20trono%20-%20%C3%81guas%20purificadoras/Diante%20do%20Trono%20-%20Quando%20Deus%20Escolhe%20Algu%C3%A9m%20_%20(CD%20_DT3%20%C3%81guas%20Purificadoras_%20-%202000).m4a" },
+            { "name": "Tempo de festa", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Diante%20do%20trono%20-%20%C3%81guas%20purificadoras/Diante%20do%20Trono%20-%20Tempo%20de%20Festa%20_%20(CD%20_DT3%20%C3%81guas%20Purificadoras_%20-%202000).m4a" },
+            { "name": "A Sombra do Altíssimo", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Diante%20do%20trono%20-%20%C3%81guas%20purificadoras/Diante%20do%20Trono%20-%20%C3%80%20Sombra%20do%20Alt%C3%ADssimo%20_%20(CD%20_DT3%20%C3%81guas%20Purificadoras_%20-%202000).m4a" },
+            { "name": "Águas purificadoras", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Diante%20do%20trono%20-%20%C3%81guas%20purificadoras/Diante%20do%20Trono%20-%20%C3%81guas%20Purificadoras%20_%20(CD%20_DT3%20%C3%81guas%20Purificadoras_%20-%202000).m4a" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Toque no Altar",
+      "albums": [
+        {
+          "name": "Olha Pra Mim",
+          "tracks": [
+            { "name": "Cântico de Davi(Abertura)", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Toque%20no%20altar%20-%20Olha%20pra%20mim/Toque%20No%20Altar%20-%20Cantico%20de%20Davi%20(Abertura).m4a" },
+            { "name": "Cântico de Davi", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Toque%20no%20altar%20-%20Olha%20pra%20mim/Toque%20No%20Altar%20-%20Cantico%20de%20Davi.m4a" },
+            { "name": "Correndo pros teus braços", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Toque%20no%20altar%20-%20Olha%20pra%20mim/Toque%20No%20Altar%20-%20Correndo%20Pros%20Teus%20Bracos.m4a" },
+            { "name": "Em toda terra", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Toque%20no%20altar%20-%20Olha%20pra%20mim/Toque%20No%20Altar%20-%20Em%20Toda%20Terra.m4a" },
+            { "name": "Lembra Senhor", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Toque%20no%20altar%20-%20Olha%20pra%20mim/Toque%20No%20Altar%20-%20Lembra%20Senhor.m4a" },
+            { "name": "Me Arrebataste", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Toque%20no%20altar%20-%20Olha%20pra%20mim/Toque%20No%20Altar%20-%20Me%20Arrebataste.m4a" },
+            { "name": "O chão vai tremer", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Toque%20no%20altar%20-%20Olha%20pra%20mim/Toque%20No%20Altar%20-%20O%20Chao%20Vai%20Tremer.m4a" },
+            { "name": "O que dizer", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Toque%20no%20altar%20-%20Olha%20pra%20mim/Toque%20No%20Altar%20-%20O%20Que%20Dizer.m4a" },
+            { "name": "Olha pra mim", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Toque%20no%20altar%20-%20Olha%20pra%20mim/Toque%20No%20Altar%20-%20Olha%20Pra%20Mim.m4a" },
+            { "name": "Senhor e Rei", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Toque%20no%20altar%20-%20Olha%20pra%20mim/Toque%20No%20Altar%20-%20Senhor%20E%20Rei.m4a" },
+            { "name": "Ser Fiel", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Toque%20no%20altar%20-%20Olha%20pra%20mim/Toque%20No%20Altar%20-%20Ser%20Fiel.m4a" },
+            { "name": "Trazendo a Arca", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Toque%20no%20altar%20-%20Olha%20pra%20mim/Toque%20No%20Altar%20-%20Trazendo%20A%20Arca.m4a" },
+            { "name": "Tua Graça me Basta", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Toque%20no%20altar%20-%20Olha%20pra%20mim/Toque%20No%20Altar%20-%20Tua%20Gra%C3%A7a%20Me%20Basta.m4a" }
+          ]
+        },
+        {
+          "name": "Restituição",
+          "tracks": [
+            { "name": "Bendito Serás", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Toque%20no%20altar%20-%20Restitui%C3%A7%C3%A3o_/Toque%20No%20Altar%20-%20Bendito%20Seras.m4a" },
+            { "name": "Caminhando estou", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Toque%20no%20altar%20-%20Restitui%C3%A7%C3%A3o_/Toque%20No%20Altar%20-%20Caminhando%20Estou.m4a" },
+            { "name": "Celebrando a colheita", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Toque%20no%20altar%20-%20Restitui%C3%A7%C3%A3o_/Toque%20No%20Altar%20-%20Celebrando%20A%20Colheita.m4a" },
+            { "name": "Mais", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Toque%20no%20altar%20-%20Restitui%C3%A7%C3%A3o_/Toque%20No%20Altar%20-%20Mais.m4a" },
+            { "name": "Manancial de Águas vivas", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Toque%20no%20altar%20-%20Restitui%C3%A7%C3%A3o_/Toque%20No%20Altar%20-%20Manancial%20De%20Aguas%20Vivas.m4a" },
+            { "name": "Não Ficarão", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Toque%20no%20altar%20-%20Restitui%C3%A7%C3%A3o_/Toque%20No%20Altar%20-%20N%C3%A3o%20Ficar%C3%A3o.m4a" },
+            { "name": "O melhor está por vir", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Toque%20no%20altar%20-%20Restitui%C3%A7%C3%A3o_/Toque%20No%20Altar%20-%20O%20Melhor%20Esta%20Por%20Vir.m4a" },
+            { "name": "Restitui", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Toque%20no%20altar%20-%20Restitui%C3%A7%C3%A3o_/Toque%20No%20Altar%20-%20Restitui.m4a" },
+            { "name": "Sete vezes mais", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Toque%20no%20altar%20-%20Restitui%C3%A7%C3%A3o_/Toque%20No%20Altar%20-%20Sete%20Vezes%20Mais.m4a" }
+          ]
+        }
+      ]
+    },
+    {
+  "name": "Trazendo a Arca",
+  "albums": [
+    {
+      "name": "Deus de Promessas",
+      "tracks": [
+        { "name": "Bendito Serei", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Trazendo%20a%20arca%20-%20Deus%20de%20promessas/Trazendo%20a%20Arca%20-%20Bendito%20Serei%20_%20CD%20Deus%20de%20Promessas.m4a" },
+        { "name": "Cidadão dos Céus", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Trazendo%20a%20arca%20-%20Deus%20de%20promessas/Trazendo%20a%20Arca%20-%20Cidad%C3%A3o%20dos%20C%C3%A9us%20_%20CD%20Deus%20de%20Promessas.m4a" },
+        { "name": "Desejo do meu coração", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Trazendo%20a%20arca%20-%20Deus%20de%20promessas/Trazendo%20a%20Arca%20-%20Desejo%20do%20Meu%20Cora%C3%A7%C3%A3o%20_%20CD%20Deus%20de%20Promessas.m4a" },
+        { "name": "Deus de Promessas", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Trazendo%20a%20arca%20-%20Deus%20de%20promessas/Trazendo%20a%20Arca%20-%20Deus%20de%20Promessas%20_%20CD%20Deus%20Promessas.m4a" },
+        { "name": "Graças", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Trazendo%20a%20arca%20-%20Deus%20de%20promessas/Trazendo%20a%20Arca%20-%20Gra%C3%A7as%20_%20CD%20Deus%20de%20Promessas.m4a" },
+        { "name": "Se a Tua voz ouvir", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Trazendo%20a%20arca%20-%20Deus%20de%20promessas/Trazendo%20a%20Arca%20-%20Se%20a%20Tua%20Voz%20Ouvir%20_%20CD%20Deus%20de%20Promessas.m4a" },
+        { "name": "Te conhecer", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Trazendo%20a%20arca%20-%20Deus%20de%20promessas/Trazendo%20a%20Arca%20-%20Te%20Conhecer%20_%20CD%20Deus%20de%20Promessas.m4a" },
+        { "name": "Toda Sorte de Benções", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Trazendo%20a%20arca%20-%20Deus%20de%20promessas/Trazendo%20a%20Arca%20-%20Toda%20Sorte%20de%20Ben%C3%A7%C3%A3os%20_%20CD%20Deus%20de%20Promessas.m4a" },
+        { "name": "Pregação", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Trazendo%20a%20arca%20-%20Deus%20de%20promessas/Trazendo%20a%20Arca%20ft.%20Pr.%20Marcus%20Greg%C3%B3rio%20-%20Prega%C3%A7%C3%A3o%20_%20CD%20Deus%20de%20Promessas.m4a" }
+      ]
+    },
+    {
+      "name": "Habito no Abrigo",
+      "tracks": [
+        { "name": "Adorai", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Trazendo%20a%20arca%20-%20Habito%20no%20abrigo/Trazendo%20a%20Arca%20_%20Adorai.m4a" },
+        { "name": "Até que os reinos", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Trazendo%20a%20arca%20-%20Habito%20no%20abrigo/Trazendo%20a%20Arca%20_%20At%C3%A9%20que%20os%20Reinos.m4a" },
+        { "name": "Batizará", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Trazendo%20a%20arca%20-%20Habito%20no%20abrigo/Trazendo%20a%20Arca%20_%20Batizar%C3%A1.m4a" },
+        { "name": "Estações", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Trazendo%20a%20arca%20-%20Habito%20no%20abrigo/Trazendo%20a%20Arca%20_%20Esta%C3%A7%C3%B5es.m4a" },
+        { "name": "Habito no abrigo", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Trazendo%20a%20arca%20-%20Habito%20no%20abrigo/Trazendo%20a%20Arca%20_%20Habito%20no%20Abrigo.m4a" },
+        { "name": "Levanta e anda", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Trazendo%20a%20arca%20-%20Habito%20no%20abrigo/Trazendo%20a%20Arca%20_%20Levanta%20e%20Anda.m4a" },
+        { "name": "Meu redentor vive", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Trazendo%20a%20arca%20-%20Habito%20no%20abrigo/Trazendo%20a%20Arca%20_%20Meu%20Redentor%20Vive.m4a" },
+        { "name": "Minhas fontes estão em ti", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Trazendo%20a%20arca%20-%20Habito%20no%20abrigo/Trazendo%20a%20Arca%20_%20Minhas%20Fontes%20Est%C3%A3o%20em%20Ti.m4a" },
+        { "name": "Ministração", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Trazendo%20a%20arca%20-%20Habito%20no%20abrigo/Trazendo%20a%20Arca%20_%20Ministra%C3%A7%C3%A3o.m4a" },
+        { "name": "O Senhor é bom", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Trazendo%20a%20arca%20-%20Habito%20no%20abrigo/Trazendo%20a%20Arca%20_%20O%20Senhor%20%C3%A9%20Bom%20(feat.%20Ana%20N%C3%B3brega).m4a" },
+        { "name": "Purifica", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Trazendo%20a%20arca%20-%20Habito%20no%20abrigo/Trazendo%20a%20Arca%20_%20Purifica.m4a" },
+        { "name": "Quão grande é o nosso Deus", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Trazendo%20a%20arca%20-%20Habito%20no%20abrigo/Trazendo%20a%20Arca%20_%20Qu%C3%A3o%20Grande%20%C3%A9%20o%20Nosso%20Deus.m4a" }
+      ]
+    },
+    {
+      "name": "Marca da Promessa",
+      "tracks": [
+        { "name": "Celebre", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Trazendo%20a%20arca%20-%20Marca%20da%20promessa/01%20Celebre%20-%20Trazendo%20A%20Arca%20(CD%20Marca%20Da%20Promessa).m4a" },
+        { "name": "Na Côrte do Egito", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Trazendo%20a%20arca%20-%20Marca%20da%20promessa/02%20Na%20C%C3%B4rte%20Do%20Egito%20-%20Trazendo%20A%20Arca%20(CD%20Marca%20Da%20Promessa).m4a" },
+        { "name": "Não vou desistir", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Trazendo%20a%20arca%20-%20Marca%20da%20promessa/03%20N%C3%A3o%20Vou%20Desistir%20-%20Trazendo%20A%20Arca%20(CD%20Marca%20Da%20Promessa).m4a" },
+        { "name": "Marca da promessa*", "url": "https://example.com/music/gospel/trazendoarca/pratocarnomanto/faixa1.mp3" },
+        { "name": "Desperta-me", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Trazendo%20a%20arca%20-%20Marca%20da%20promessa/05%20Desperta%20me%20-%20Trazendo%20A%20Arca%20(CD%20Marca%20Da%20Promessa).m4a" },
+        { "name": "Sobre as Águas", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Trazendo%20a%20arca%20-%20Marca%20da%20promessa/06%20Sobre%20As%20%C3%81guas%20-%20Trazendo%20A%20Arca%20(CD%20Marca%20Da%20Promessa).m4a" },
+        { "name": "Dizem", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Trazendo%20a%20arca%20-%20Marca%20da%20promessa/07%20Dizem%20-%20Trazendo%20A%20Arca%20(CD%20Marca%20Da%20Promessa).m4a" },
+        { "name": "Muda-me", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Trazendo%20a%20arca%20-%20Marca%20da%20promessa/08%20Muda%20me%20-%20Trazendo%20A%20Arca%20(CD%20Marca%20Da%20Promessa).m4a" },
+        { "name": "Bônus Track", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Trazendo%20a%20arca%20-%20Marca%20da%20promessa/09%20Marca%20Da%20Promessa%20_B%C3%B4nus%20Track_%20-%20Trazendo%20A%20Arca%20(CD%20Marca%20Da%20Promessa).m4a" }
+      ]
+    },
+    {
+      "name": "Pra Tocar no Manto",
+      "tracks": [
+        { "name": "Pra tocar no manto", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Trazendo%20a%20arca%20-%20Pra%20tocar%20no%20manto/Trazendo%20A%20Arca%20-%20Pra%20Tocar%20No%20Manto.m4a" },
+        { "name": "Dono das estrelas", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Trazendo%20a%20arca%20-%20Pra%20tocar%20no%20manto/Trazendo%20a%20Arca%20-%20%20Dono%20das%20Estrelas%20(Pra%20Tocar%20no%20Manto).m4a" },
+        { "name": "Salmo 03", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Trazendo%20a%20arca%20-%20Pra%20tocar%20no%20manto/Trazendo%20a%20Arca%20-%20%20Salmo%2003%20(Pra%20tocar%20no%20manto).m4a" },
+        { "name": "Toca na Rocha", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Trazendo%20a%20arca%20-%20Pra%20tocar%20no%20manto/Trazendo%20a%20Arca%20-%20%20Toca%20na%20Rocha%20(Pra%20Tocar%20no%20Manto).m4a" },
+        { "name": "Caminhos de milagres", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Trazendo%20a%20arca%20-%20Pra%20tocar%20no%20manto/Trazendo%20a%20Arca%20-%20Caminhos%20de%20Milagres%20(Pra%20Tocar%20no%20Manto).m4a" },
+        { "name": "Cruz", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Trazendo%20a%20arca%20-%20Pra%20tocar%20no%20manto/Trazendo%20a%20Arca%20-%20Cruz%20(Pra%20Tocar%20no%20Manto).m4a" },
+        { "name": "Invoca-me", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Trazendo%20a%20arca%20-%20Pra%20tocar%20no%20manto/Trazendo%20a%20Arca%20-%20Invoca-Me%20%20(Pra%20Tocar%20no%20Manto).m4a" },
+        { "name": "Perdoa", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Trazendo%20a%20arca%20-%20Pra%20tocar%20no%20manto/Trazendo%20a%20Arca%20-%20Perdoa%20(Pra%20Tocar%20no%20Manto).m4a" },
+        { "name": "Semeando com lagrimas", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Trazendo%20a%20arca%20-%20Pra%20tocar%20no%20manto/Trazendo%20a%20Arca%20-%20Semeando%20com%20Lagrimas%20(Pra%20tocar%20no%20Manto).m4a" },
+        { "name": "Será sempre Deus", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Trazendo%20a%20arca%20-%20Pra%20tocar%20no%20manto/Trazendo%20a%20Arca%20-%20Ser%C3%A1%20sempre%20Deus%20(Pra%20Tocar%20no%20Manto).m4a" },
+        { "name": "Yeshua", "url": "https://github.com/legado2603/music/raw/main/gospel%20/louvor/Trazendo%20a%20arca%20-%20Pra%20tocar%20no%20manto/Trazendo%20a%20Arca%20-%20Yeshua%20(Pra%20Tocar%20no%20Manto).m4a" }
+      ]
+    }
+  ]
+}
+  ]
+},
+    {
+      "name": "Reggaeton",
+      "artists": [
+        {
+          "name": "Artista 17",
+          "albums": [
+            {
+              "name": "Álbum 17",
+              "tracks": [
+                { "name": "Faixa 1", "url": "https://example.com/music/reggaeton/artist17/album17/track1.mp3" },
+                { "name": "Faixa 2", "url": "https://example.com/music/reggaeton/artist17/album17/track2.mp3" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Dance",
+      "artists": [
+        {
+          "name": "Artista 18",
+          "albums": [
+            {
+              "name": "Álbum 18",
+              "tracks": [
+                { "name": "Faixa 1", "url": "https://example.com/music/dance/artist18/album18/track1.mp3" },
+                { "name": "Faixa 2", "url": "https://example.com/music/dance/artist18/album18/track2.mp3" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Synthwave",
+      "artists": [
+        {
+          "name": "Artista 19",
+          "albums": [
+            {
+              "name": "Álbum 19",
+              "tracks": [
+                { "name": "Faixa 1", "url": "https://example.com/music/synthwave/artist19/album19/track1.mp3" },
+                { "name": "Faixa 2", "url": "https://example.com/music/synthwave/artist19/album19/track2.mp3" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ambient",
+      "artists": [
+        {
+          "name": "Artista 20",
+          "albums": [
+            {
+              "name": "Álbum 20",
+              "tracks": [
+                { "name": "Faixa 1", "url": "https://example.com/music/ambient/artist20/album20/track1.mp3" },
+                { "name": "Faixa 2", "url": "https://example.com/music/ambient/artist20/album20/track2.mp3" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "House",
+      "artists": [
+        {
+          "name": "Artista 21",
+          "albums": [
+            {
+              "name": "Álbum 21",
+              "tracks": [
+                { "name": "Faixa 1", "url": "https://example.com/music/house/artist21/album21/track1.mp3" },
+                { "name": "Faixa 2", "url": "https://example.com/music/house/artist21/album21/track2.mp3" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Trap",
+      "artists": [
+        {
+          "name": "Artista 22",
+          "albums": [
+            {
+              "name": "Álbum 22",
+              "tracks": [
+                { "name": "Faixa 1", "url": "https://example.com/music/trap/artist22/album22/track1.mp3" },
+                { "name": "Faixa 2", "url": "https://example.com/music/trap/artist22/album22/track2.mp3" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

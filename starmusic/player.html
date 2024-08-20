@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Player de Música</title>
+ <link rel="stylesheet" href="stylemusic.css">
+</head>
+<body>
+  <div id="sidebar">
+    <ul id="genres-list"></ul>
+    <button id="close-sidebar">Fechar</button>
+  </div>
+
+  <button id="toggle-sidebar">Musicas</button>
+
+  <div id="artist-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" data-modal="artist-modal">&times;</span>
+      <h2>Artistas</h2>
+      <ul id="artist-list"></ul>
+    </div>
+  </div>
+
+  <div id="album-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" data-modal="album-modal">&times;</span>
+      <h2>Álbuns</h2>
+      <ul id="album-list"></ul>
+    </div>
+  </div>
+
+  <div id="track-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" data-modal="track-modal">&times;</span>
+      <h2>Faixas</h2>
+      <ul id="track-list"></ul>
+    </div>
+  </div>
+
+  <div id="player-controls">
+    <button id="play-pause">▶️</button>
+    <button id="stop">⏹️</button>
+    <button id="rewind">⏪</button>
+    <button id="forward">⏩</button>
+    <button id="prev-track">⏮️</button>
+    <button id="next-track">⏭️</button>
+  </div>
+
+  <audio id="audio-player" controls></audio>
+
+  <script src="app.js" defer></script>
+    
+</body>
+</html>

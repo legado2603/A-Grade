@@ -1,0 +1,256 @@
+/* Geral */
+body {
+  background-image: url('ceu.gif'); /* Caminho da imagem */
+  background-size: cover;         /* Ajusta a imagem para cobrir todo o fundo */
+  background-position: center;    /* Centraliza a imagem */
+  background-repeat: no-repeat;   /* Evita que a imagem se repita */
+  background-attachment: fixed;   /* Fixa a imagem no fundo */
+  background-color: #000;         /* Cor de fundo se a imagem não carregar */
+
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #000; /* Fundo preto */
+  color: #fff;
+}
+
+/* Sidebar */
+#sidebar {
+  background-image: url('ceu.gif');
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px; /* Largura ajustada */
+  height: 100%;
+  background-color: #000; /* Fundo preto */
+  padding: 10px;
+  display: none; /* Inicialmente oculto */
+  box-shadow: 2px 0 5px rgba(0, 255, 0, 0.7); /* Sombra neon verde */
+  border-right: 2px solid #00ff00; /* Borda neon verde */
+  border-radius: 10px; /* Bordas arredondadas */
+  z-index: 10; /* Garantir que fique acima dos outros elementos */
+  overflow-y: auto; /* Adiciona rolagem vertical */
+}
+
+#sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte */
+}
+
+#sidebar li {
+  margin-bottom: 10px; /* Espaçamento entre itens */
+  flex: 1 1 48%; /* Permite que dois itens caibam lado a lado */
+}
+
+#sidebar .genre-button {
+  background-color: rgba(17, 17, 17, 0.4); /* Fundo preto com 80% de opacidade */
+  border: 2px solid #00ff00; /* Borda neon verde */
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 10px; /* Bordas arredondadas */
+}
+
+#sidebar .genre-button:hover {
+  background-color: #222; /* Fundo preto mais escuro */
+}
+
+#close-sidebar {
+  background-color: rgba(217, 83, 79, 0.4); /* Fundo vermelho com 80% de opacidade */
+  border: 2px solid #00ff00; /* Borda neon verde */
+  color: #fff;
+  padding: 10px;
+  width: 70%;
+  cursor: pointer;
+  margin-top: 20px;
+  text-align: center;
+  border-radius: 10px; /* Bordas arredondadas */
+  font-size: 16px; /* Tamanho da fonte ajustado */
+}
+
+/* Botão de abrir a sidebar */
+#toggle-sidebar {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: rgba(17, 17, 17, 0.4);
+  border: 2px solid #00ff00; /* Borda neon verde */
+  color: yellow;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 9; /* Garantir que fique abaixo da sidebar */
+  border-radius: 10px; /* Bordas arredondadas */
+  transition: opacity 0.3s ease; /* Transição suave para visibilidade */
+}
+
+/* Mostrar o botão de abrir a sidebar quando a sidebar está oculta */
+#sidebar:not(.visible) ~ #toggle-sidebar {
+  opacity: 1; /* Botão visível */
+}
+
+/* Ocultar o botão de abrir a sidebar quando a sidebar está visível */
+#sidebar.visible ~ #toggle-sidebar {
+  opacity: 0; /* Botão invisível */
+  pointer-events: none; /* Desabilita interações */
+}
+
+#toggle-sidebar:hover {
+  background-color: white;
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
+  #sidebar {
+    width: 100%;
+    height: 100vh; /* Altura da viewport */
+    padding: 20px; /* Padding aumentado para dispositivos móveis */
+  }
+  
+  #toggle-sidebar {
+    top: 10px;
+    left: 10px;
+  }
+}
+
+/* Modais */
+.modal {
+  display: none; /* Inicialmente oculto */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 12; /* Garantir que fiquem acima da sidebar e do botão */
+}
+
+.modal-content {
+  background-color: #000; /* Fundo preto */
+  color: #fff;
+  padding: 20px;
+  border-radius: 15px; /* Bordas arredondadas */
+  width: 80%;
+  max-width: 600px;
+  max-height: 80vh; /* Altura máxima para o conteúdo do modal */
+  overflow-y: auto; /* Adiciona rolagem vertical caso o conteúdo exceda a altura */
+  border: 2px solid #00ff00; /* Borda neon verde */
+}
+
+.modal-content h2 {
+  margin-top: 0;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #fff;
+}
+
+/* Controles do player */
+#player-controls {
+  position: fixed;
+  bottom: 80px; /* Ajuste para dar espaço ao player */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0); /* Fundo totalmente transparente */
+  padding: 10px;
+  border-radius: 15px; /* Bordas arredondadas */
+  display: flex;
+  gap: 10px;
+  border: 2px solid #00ff00; /* Borda neon verde */
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.7); /* Sombra neon verde */
+  z-index: 9; /* Garantir que fique acima do player */
+}
+
+/* Botões de controle */
+#player-controls button {
+  background-color: rgba(0, 0, 0, 0); /* Fundo transparente */
+  border: 2px solid #00ff00; /* Borda neon verde */
+  color: #fff;
+  padding: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 15px; /* Bordas arredondadas */
+}
+
+/* Estilo de hover para os botões */
+#player-controls button:hover {
+  background-color: rgba(0, 0, 0, 0.3); /* Fundo preto semitransparente ao passar o mouse */
+}
+
+/* Player de áudio */
+#audio-player {
+  position: fixed;
+  bottom: 20px; /* Coloca o player no fundo da página */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 600px;
+  border: 2px solid #00ff00; /* Borda neon verde */
+  border-radius: 15px; /* Bordas arredondadas */
+  z-index: 8; /* Mantém o player abaixo dos controles */
+}
+
+/* Barra de progresso do áudio */
+audio::-webkit-media-controls-panel {
+  background-color: #660000; /* Fundo preto */
+  border-radius: 15px; /* Bordas arredondadas */
+}
+
+audio::-webkit-media-controls-timeline,
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+  color: #00ff00; /* Cor do texto (tempo) em neon verde */
+}
+
+audio::-webkit-media-controls-progress-bar {
+  background-color: #111; /* Cor do fundo da barra */
+  border-radius: 15px; /* Bordas arredondadas */
+}
+
+audio::-webkit-media-controls-mute-button,
+audio::-webkit-media-controls-play-button {
+  color: #00ff00; /* Neon verde para botões */
+}
+
+/* Para o Firefox */
+audio::-moz-progress-bar {
+  background-color: #00ff00; /* Neon verde */
+  border-radius: 15px; /* Bordas arredondadas */
+}
+
+/* Estilo para os botões dentro dos modais */
+#artist-list button, #album-list button, #track-list button {
+  background-color: #111; /* Fundo preto */
+  border: 2px solid #00ff00; /* Borda neon verde */
+  color: #fff;
+  padding: 8px; /* Reduz o padding para diminuir o tamanho do botão */
+  font-size: 16px; /* Reduz o tamanho da fonte */
+  cursor: pointer;
+  border-radius: 10px; /* Bordas arredondadas ajustadas */
+  margin: 5px; /* Espaçamento entre botões */
+  width: calc(100% - 10px); /* Ajuste de largura */
+}
+
+/* Lista de músicas em duas colunas */
+#track-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Duas colunas de tamanho igual */
+  gap: 8px; /* Espaçamento entre os itens ajustado */
+}
+
+#track-list button:hover, #album-list button:hover, #artist-list button:hover {
+  background-color: #222; /* Fundo preto mais escuro */
+}
