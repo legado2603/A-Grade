@@ -109,6 +109,9 @@ document.getElementById("outroBotao5").addEventListener("click", function() {
 document.getElementById("outroBotao6").addEventListener("click", function() {
   window.location.href = "sobre.html"; // Substitua pela URL desejada
 });
+document.getElementById("outroBotao7").addEventListener("click", function() {
+  window.location.href = "starmusic/index.html"; // Substitua pela URL desejada
+});
 
 
         function openModal() {
