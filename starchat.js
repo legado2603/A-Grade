@@ -126,30 +126,6 @@ document.getElementById('createRoomSubmit').addEventListener('click', () => {
       }
     });
 
-    // Abrir modal de lista de salas
-    document.getElementById('listRoomsBtn').addEventListener('click', () => {
-    document.getElementById('mainScreen').style.display = 'none';
-    document.getElementById('roomsModal').style.display = 'block';
-
-    // Lista fixa de nomes de salas
-    const allowedRooms = ["1", "CULINÁRIA", "ESPORTES", "ESTUDOS", "FILMES", "GERAL", "JOGOS", "LIVROS", "MÚSICA", "NOTÍCIAS", "SAÚDE", "TECNOLOGIA"];
-
-    const roomsElement = document.getElementById('rooms');
-    roomsElement.innerHTML = '';
-
-    // Adicionar os botões manualmente para as salas desejadas
-    allowedRooms.forEach(roomName => {
-        const roomBtn = document.createElement('button');
-        roomBtn.textContent = roomName;
-        roomBtn.className = 'room-btn';
-        roomBtn.addEventListener('click', () => {
-            // Supondo que o roomId seja o mesmo que o nome da sala
-            document.getElementById('roomIdInput').value = roomName;
-            document.getElementById('joinRoomBtn').click();
-        });
-        roomsElement.appendChild(roomBtn);
-    });
-});
 
     // Função para abrir a interface de chat
     function openChat() {
