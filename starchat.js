@@ -126,6 +126,28 @@ document.getElementById('createRoomSubmit').addEventListener('click', () => {
       }
     });
 
+    // Abrir modal de lista de salas
+    document.getElementById('listRoomsBtn').addEventListener('click', () => {
+      document.getElementById('mainScreen').style.display = 'none';
+      document.getElementById('roomsModal').style.display = 'block';
+      const roomsRef = database.ref('rooms').limitToFirst(12);
+      roomsRef.once('value').then(snapshot => {
+        const roomsElement = document.getElementById('rooms');
+        roomsElement.innerHTML = '';
+        snapshot.forEach(childSnapshot => {
+          const roomId = childSnapshot.key;
+          const roomName = childSnapshot.val().name;
+          const roomBtn = document.createElement('button');
+          roomBtn.textContent = roomName;
+          roomBtn.className = 'room-btn';
+          roomBtn.addEventListener('click', () => {
+            document.getElementById('roomIdInput').value = roomId;
+            document.getElementById('joinRoomBtn').click();
+          });
+          roomsElement.appendChild(roomBtn);
+        });
+      });
+    });
 
     // Função para abrir a interface de chat
     function openChat() {
