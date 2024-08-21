@@ -132,29 +132,22 @@ document.getElementById('createRoomSubmit').addEventListener('click', () => {
     document.getElementById('roomsModal').style.display = 'block';
 
     // Lista fixa de nomes de salas
-    const allowedRooms = ["CULINÁRIA", "ESPORTE", "ESTUDOS", "FILMES", "GERAL", "JOGOS", "LIVROS", "MÚSICA", "NOTÍCIAS", "SAÚDE", "TECNOLOGIA"];
-    
-    const roomsRef = database.ref('rooms').limitToFirst(12);
-    roomsRef.once('value').then(snapshot => {
-        const roomsElement = document.getElementById('rooms');
-        roomsElement.innerHTML = '';
+    const allowedRooms = ["1", "CULINÁRIA", "ESPORTES", "ESTUDOS", "FILMES", "GERAL", "JOGOS", "LIVROS", "MÚSICA", "NOTÍCIAS", "SAÚDE", "TECNOLOGIA"];
 
-        snapshot.forEach(childSnapshot => {
-            const roomName = childSnapshot.val().name;
+    const roomsElement = document.getElementById('rooms');
+    roomsElement.innerHTML = '';
 
-            // Exibir apenas se o nome da sala estiver na lista permitida
-            if (allowedRooms.includes(roomName)) {
-                const roomId = childSnapshot.key;
-                const roomBtn = document.createElement('button');
-                roomBtn.textContent = roomName;
-                roomBtn.className = 'room-btn';
-                roomBtn.addEventListener('click', () => {
-                    document.getElementById('roomIdInput').value = roomId;
-                    document.getElementById('joinRoomBtn').click();
-                });
-                roomsElement.appendChild(roomBtn);
-            }
+    // Adicionar os botões manualmente para as salas desejadas
+    allowedRooms.forEach(roomName => {
+        const roomBtn = document.createElement('button');
+        roomBtn.textContent = roomName;
+        roomBtn.className = 'room-btn';
+        roomBtn.addEventListener('click', () => {
+            // Supondo que o roomId seja o mesmo que o nome da sala
+            document.getElementById('roomIdInput').value = roomName;
+            document.getElementById('joinRoomBtn').click();
         });
+        roomsElement.appendChild(roomBtn);
     });
 });
 
