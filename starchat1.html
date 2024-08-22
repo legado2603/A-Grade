@@ -13,7 +13,7 @@
 body {
   font-family: 'Times New Roman', serif;
   background-color: black;
-  background-image: url('eecdb55768e30c90fe9e91ba6db1e9b0.jpg'); 
+  background-image: url('eecdb55768e30c90fe9e91ba6db1e9b0.jpg');
   color: #FFFF00;
   margin: 0;
   padding: 20px;
@@ -21,16 +21,15 @@ body {
 }
 
 button {
-  font-size: 16px;
+  font-size: 14px; /* Reduzido em 50% */
   font-weight: bold;
   color: yellow;
   background: black;
   border: 2px solid green;
   border-radius: 5px;
-  padding: 10px 20px;
+  padding: 7px 15px; /* Reduzido em 50% */
   text-transform: uppercase;
   transition: opacity 0.3s ease;
-  margin: 10px;
   cursor: pointer;
   box-shadow: 0 0 10px green;
 }
@@ -45,8 +44,8 @@ button:active {
 }
 
 input[type="text"] {
-  font-size: 16px;
-  padding: 10px;
+  font-size: 14px; /* Reduzido em 50% */
+  padding: 5px; /* Reduzido em 50% */
   margin: 10px;
   border: 2px solid #FFFF00;
   background-color: black;
@@ -97,30 +96,65 @@ input[type="text"] {
 }
 
 /* Estilos do botão Starchat */
-.starchat-btn {
-  font-size: 14px;
+.starchat-btn,
+.home,
+.about {
+  font-size: 14px; /* Reduzido em 50% */
   font-weight: bold;
   color: yellow;
   background: black;
   border: 2px solid green;
   border-radius: 15px;
-  padding: 10px 20px;
+  padding: 10px 15px; /* Reduzido em 50% */
   text-transform: uppercase;
   transition: opacity 0.3s ease;
-  position: fixed; /* Fixar o botão na tela */
-  bottom: 20px; /* Ajuste a distância da parte inferior */
-  right: 20px; /* Ajuste a distância da parte direita */
   cursor: pointer;
   box-shadow: 0 0 10px green;
+  width: 100px; /* Reduzido em 50% */
+  position: fixed;
 }
 
-.starchat-btn:hover {
-  opacity: 0.8;
+/* Estilos específicos para diferentes tamanhos de tela */
+@media (min-width: 768px) {
+  .starchat-btn,
+  .home,
+  .about {
+    width: 125px; /* Reduzido em 50% */
+  }
+
+  .starchat-btn {
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .home {
+    bottom: 55px; /* Espaçamento geométrico entre os botões */
+    right: 10px;
+  }
+
+  .about {
+    bottom: 100px; /* Espaçamento geométrico entre os botões */
+    right: 10px;
+  }
 }
 
-.starchat-btn:active {
-  opacity: 0.8;
-  transform: translateY(1px);
+@media (max-width: 767px) {
+  .starchat-btn,
+  .home,
+  .about {
+    width: 45%; /* Reduzido em 50% */
+    position: fixed;
+    right: 5%;
+    bottom: 5%;
+  }
+
+  .home {
+    bottom: 13%; /* Espaçamento geométrico entre os botões */
+  }
+
+  .about {
+    bottom: 21%; /* Espaçamento geométrico entre os botões */
+  }
 }
 
 /* Estilo do chat */
@@ -210,41 +244,47 @@ input[type="text"] {
   text-decoration: none;
   cursor: pointer;
 }
-.home{
-  font-size: 14px;
-  font-weight: bold;
-  color: yellow;
-  background: black;
-  border: 2px solid green;
-  border-radius: 15px;
-  padding: 10px 20px;
-  text-transform: uppercase;
-  transition: opacity 0.3s ease;
-  position: fixed; /* Fixar o botão na tela */
-  bottom: 80px; /* Ajuste a distância da parte inferior */
-  right: 37px; /* Ajuste a distância da parte direita */
-  cursor: pointer;
-  box-shadow: 0 0 10px green;
+.instructions-container {
+  background: black; /* Fundo preto */
+  border: 2px solid green; /* Borda verde */
+  border-radius: 15px; /* Bordas arredondadas */
+  padding: 20px; /* Espaçamento interno */
+  margin: 20px auto; /* Margem automática para centralizar */
+  width: 80%; /* Largura do contêiner */
+  max-width: 600px; /* Largura máxima */
+  box-shadow: 0 0 10px green; /* Sombra verde */
+  color: #ADD8E6; /* Cor do texto */
 }
-.about {
-  font-size: 14px;
-  font-weight: bold;
-  color: yellow;
-  background: black;
-  border: 2px solid green;
-  border-radius: 15px;
-  padding: 10px 20px;
-  text-transform: uppercase;
-  transition: opacity 0.3s ease;
-  position: fixed; /* Fixar o botão na tela */
-  bottom: 140px; /* Ajuste a distância da parte inferior */
-  right: 34px; /* Ajuste a distância da parte direita */
-  cursor: pointer;
-  box-shadow: 0 0 10px green;
+
+.instructions-container h2 {
+  color: yellow; /* Cor do título */
+  font-size: 24px; /* Tamanho da fonte */
+  font-weight: bold; /* Negrito */
+  text-transform: uppercase; /* Letras maiúsculas */
+}
+
+.instructions-container p, 
+.instructions-container ul {
+  text-align: left; /* Alinhamento do texto */
+}
+
+.instructions-container ul {
+  list-style-type: disc; /* Marcadores de lista */
+  padding-left: 20px; /* Espaçamento à esquerda dos itens da lista */
 }
   </style>
 </head>
 <body>
+  <div class="instructions-container">
+    <h2>Instruções</h2>
+    <p>Descubra como aproveitar ao máximo nossos recursos:</p>
+    <ul>
+        <li><strong>Botão de Perfil:</strong> Personalize sua foto, capa, nome de usuário, idade e biografia. É seu espaço para brilhar!</li>
+        <li><strong>Botão Home:</strong> Volte à página inicial a qualquer momento. Seu atalho para reiniciar a navegação.</li>
+        <li><strong>Botão Starchat:</strong> Crie salas de chat privadas ou abertas. Escolha entre senha ou sem senha para suas conversas.</li>
+    </ul>
+    <p>Explore e divirta-se!</p>
+</div>
     <button class="home" onclick="redirectToIndex()">Home</button>
     <button class="about" onclick="redirectToAbout()">Perfil</button>
   <!-- Botão Starchat -->

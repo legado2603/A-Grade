@@ -20,14 +20,14 @@
 
     #chat-box {
       width: 80%;
-      max-width: 800px;
-      height: 60vh;
+      max-width: 700px;
+      height: 50vh;
       overflow-y: auto;
       border: 1px solid #333;
       background-image: url('eecdb55768e30c90fe9e91ba6db1e9b0.jpg');
       background-color: #111;
       padding: 10px;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
 
     #input-container {
@@ -60,22 +60,41 @@
     }
 
     .user {
-      color: #ffff00; /* Amarelo */
-    }
+  color: #ffff00; /* Amarelo */
+  background-color: rgba(0, 0, 0, 0.5); /* Preto com 50% de transparência */
+  padding: 5px; /* Adiciona um pouco de espaçamento ao redor do texto */
+  border-radius: 5px; /* Opcional: bordas arredondadas */
+}
 
-    .bot {
-      color: #ff0000; /* Vermelho */
-    }
+.bot {
+  color: #ff0000; /* Vermelho */
+  background-color: rgba(0, 0, 0, 0.5); /* Preto com 50% de transparência */
+  padding: 5px; /* Adiciona um pouco de espaçamento ao redor do texto */
+  border-radius: 5px; /* Opcional: bordas arredondadas */
+}
 
     .online-users {
       margin-bottom: 10px;
       color: #00ff00; /* Verde */
     }
     .logo-title {
-    display: inline-block;
-    vertical-align: middle;
-    height: 3.5em; /* Define a altura da logo em relação ao tamanho da fonte */
-    width: auto;   /* Mantém a proporção da imagem */
+  display: inline-block;
+  vertical-align: middle;
+  height: 3.0em;
+  width: auto;
+  position: relative;
+  top: -30px; /* Move a logo 10px para cima, ajuste conforme necessário */
+}
+p {
+  font-family: monospace;
+  font-size: 1.2em; /* Ajusta o tamanho da fonte conforme necessário */
+  color: #00ff00; /* Verde para destacar o texto */
+  background-color: rgba(0, 0, 0, 0.7); /* Preto com 70% de transparência */
+  padding: 10px; /* Adiciona espaço ao redor do texto */
+  border-radius: 5px; /* Opcional: bordas arredondadas */
+  border: 1px solid #333; /* Opcional: borda ao redor do fundo */
+  margin: 1px 0; /* Reduz o espaço acima e abaixo do parágrafo para movê-lo mais para cima */
+  text-align: center; /* Centraliza o texto dentro do elemento */
 }
   </style>
 </head>
