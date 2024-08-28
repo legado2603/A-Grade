@@ -49,6 +49,9 @@ async function carregarNoticias() {
                 container.appendChild(artigoElem);
             });
     }
+    
+    // Garantir que a página comece no topo
+    window.scrollTo(0, 0);
 }
 
 function showIframe(url) {
