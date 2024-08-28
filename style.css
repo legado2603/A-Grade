@@ -291,3 +291,85 @@ align-items: center;
                     drop-shadow(0 0 10px #ffcc00);
             }
         }
+
+
+#news-container {
+    padding: 20px;
+}
+
+.news-item {
+    background: rgba(50, 50, 50, 0.8); /* Fundo ajustado para tom escuro com transparência */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra mais intensa */
+    margin-bottom: 20px;
+    padding: 15px;
+    position: relative;
+    color: #add8e6; /* Cor do texto ajustada */
+}
+
+.news-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.8); /* Efeito de sombra em chamas amarelas */
+}
+
+.news-item h2 {
+    margin-top: 0;
+    color: #ffcc00; /* Cor do texto ajustada */
+}
+
+.news-item p {
+    margin: 0;
+    color: #add8e6; /* Cor do texto ajustada */
+}
+
+.news-item a {
+    color: yellow; /* Cor do link ajustada */
+    text-decoration: none;
+}
+
+.news-item a:hover {
+    text-decoration: underline;
+}
+
+#iframe-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9); /* Fundo escuro translúcido */
+    z-index: 1000;
+    overflow: auto;
+}
+
+#iframe-container iframe {
+    width: 80%;
+    height: 80%;
+    border: none;
+    margin: 20px auto;
+    display: block;
+    background: #fff; /* Fundo ajustado para tom claro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra mais suave */
+}
+
+#iframe-container .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(50, 50, 50, 0.8); /* Fundo ajustado para tom escuro */
+    border: 2px solid #add8e6; /* Borda azul-claro */
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    color: #add8e6; /* Cor do texto ajustada */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+}
+
+#iframe-container .close-btn:hover {
+    background: #333; /* Fundo escuro ao passar o mouse */
+}

@@ -213,9 +213,14 @@
  <button class="toggle-button" onclick="toggleSidebar()">Fechar</button><br>
  <button class="toggle-button" onclick="logout()">Deslogar</button>
 </div>
-<!--- class="content"-->
-<h2>Conteúdo Principal
-Sam Flynn, um jovem que descobre um portal para um universo paralelo, onde os programas de computador têm vida própria. Preso nesse mundo, Sam se vê envolvido em uma batalha épica contra Clu, um ditador virtual que busca subjugar todos os habitantes digitais. Com a ajuda de Quorra, uma guerreira destemida, Sam embarca em uma missão para libertar esse mundo virtual da opressão e restaurar o equilíbrio entre os dois reinos. "A Revolução dos Bits" mergulha os espectadores em uma aventura emocionante, repleta de reviravoltas eletrizantes e confrontos épicos, enquanto explora os limites entre o mundo real e o digital.".</p></h2>
+    
+    <div id="news-container"></div>
+
+    <div id="iframe-container">
+        <button class="close-btn">&times;</button>
+        <iframe id="news-iframe"></iframe>
+    </div>
+
 <div class="extra-space">
   <h1>Espaço extra</h1>
             <!-- Conteúdo extra na terceira coluna(So abre na horizontal-Css Media -->
@@ -224,6 +229,7 @@ Sam Flynn, um jovem que descobre um portal para um universo paralelo, onde os pr
 
     <script src="script.js"></script>
     <script src="siderbar.js"></script>
+    <script src="news.js"></script>
       <script type="module">
     import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js';
     import { getAuth, onAuthStateChanged, signOut } from 'https://www.gstatic.com/firebasejs/9.6.0/firebase-auth.js';
