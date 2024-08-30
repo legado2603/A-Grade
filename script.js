@@ -50,13 +50,25 @@ function pesquisar() {
     request.execute(function(response) {
         var resultados = response.result.items;
         var listaVideos = '';
-        resultados.forEach(function(item) {
-            var videoId = item.id.videoId;
-            var titulo = item.snippet.title;
-            var thumbnail = item.snippet.thumbnails.default.url;
-            listaVideos += '<div><a href="#" onclick="abrirModal(\'' + videoId + '\')"><img src="' + thumbnail + '"><br>' + titulo + '</a></div>';
-        });
-        document.getElementById('resultadoPesquisa').innerHTML = listaVideos;
+
+        // Verifica se há resultados
+        if (resultados.length > 0) {
+            // Monta a lista de vídeos
+            resultados.forEach(function(item) {
+                var videoId = item.id.videoId;
+                var titulo = item.snippet.title;
+                var thumbnail = item.snippet.thumbnails.default.url;
+                listaVideos += '<div><a href="#" onclick="abrirModal(\'' + videoId + '\')"><img src="' + thumbnail + '"><br>' + titulo + '</a></div>';
+            });
+            
+            // Atualiza o container com os resultados e mostra o container
+            document.getElementById('resultadoPesquisa').innerHTML = listaVideos;
+            document.getElementById('resultadoPesquisa').classList.add('show');
+        } else {
+            // Limpa o conteúdo e oculta o container se não houver resultados
+            document.getElementById('resultadoPesquisa').innerHTML = '';
+            document.getElementById('resultadoPesquisa').classList.remove('show');
+        }
     });
 }
 

@@ -360,16 +360,92 @@ align-items: center;
     top: 20px;
     right: 20px;
     background: rgba(50, 50, 50, 0.8); /* Fundo ajustado para tom escuro */
-    border: 2px solid #add8e6; /* Borda azul-claro */
+    border: 2px solid greenyellow; /* Borda azul-claro */
     border-radius: 50%;
     width: 30px;
     height: 30px;
     font-size: 20px;
-    color: #add8e6; /* Cor do texto ajustada */
+    color: #red; /* Cor do texto ajustada */
     cursor: pointer;
     transition: background-color 0.3s; /* Transição suave para a cor de fundo */
 }
 
 #iframe-container .close-btn:hover {
     background: #333; /* Fundo escuro ao passar o mouse */
+}
+/* Estilo do <h3> para manter o estilo da página */
+h3 {
+    color: #add8e6; /* Cor do texto no cabeçalho */
+    margin: 0; /* Remove margens padrão do <h3> */
+    padding: 0; /* Remove preenchimento padrão do <h3> */
+    font-size: 24px; /* Define o tamanho da fonte para o cabeçalho */
+}
+
+/* Estilo do div com id "youtube" */
+#youtube {
+    font-family: 'Arial Black', Arial, sans-serif; /* Fonte especificada */
+    color: #00ff00; /* Cor do texto verde */
+    font-weight: bold; /* Texto em negrito */
+    font-style: italic; /* Texto em itálico */
+    border: 2px solid #ffff00; /* Borda amarela ao redor do texto */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    background: rgba(0, 0, 0, 0.5); /* Fundo escuro semi-transparente */
+}
+
+/* Remove o <div> vazio se não for necessário */
+h3 > div:last-child {
+    display: none;
+}
+/* Estilização do campo de entrada */
+#termoPesquisa {
+    width: calc(100% - 120px); /* Ajuste a largura para combinar com o botão */
+    padding: 10px;
+    border: 2px solid #ffcc00; /* Borda amarela */
+    border-radius: 5px;
+    background-color: #333; /* Cor de fundo escura */
+    color: #add8e6; /* Cor do texto */
+    font-family: Arial, sans-serif; /* Fonte consistente */
+    font-size: 16px; /* Tamanho da fonte */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra ao redor */
+    outline: none; /* Remove o contorno padrão */
+}
+
+/* Estilização do botão com borda amarela */
+button {
+    background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo escura com opacidade */
+    color: yellow; /* Cor do texto */
+    padding: 10px 20px;
+    border: 2px solid #ffcc00; /* Borda amarela */
+    border-radius: 50px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de mão ao passar sobre o botão */
+    font-size: 16px; /* Tamanho da fonte */
+    font-family: Arial, sans-serif; /* Fonte consistente */
+    transition: background-color 0.3s; /* Transição suave de cor de fundo */
+}
+
+/* Efeito de hover no botão */
+button:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Escurece o fundo ao passar o mouse */
+}
+/* Estilo dos links de título dos vídeos */
+#resultadoPesquisa a {
+    color: #ffff00; /* Cor amarela do texto */
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    font-family: 'Arial Black', sans-serif; /* Define a fonte como Arial Black */
+    font-size: 17px; /* Ajusta o tamanho da fonte conforme necessário */
+    display: inline-block; /* Garante que o padding e margin sejam aplicados corretamente */
+    padding: 12px 20px; /* Adiciona espaçamento ao redor do texto */
+    border: 2px solid transparent; /* Adiciona uma borda transparente para evitar deslocamento de layout */
+    border-radius: 8px; /* Arredonda os cantos dos links */
+    background-color: #333; /* Fundo escuro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adiciona sombra para um efeito de profundidade */
+    transition: all 0.3s ease; /* Adiciona uma transição suave para efeitos ao passar o mouse */
+}
+
+#resultadoPesquisa a:hover {
+    color: #ffff00; /* Mantém a cor amarela do texto ao passar o mouse */
+    border-color: #ffff00; /* Adiciona uma borda amarela ao passar o mouse */
+    background-color: #444; /* Fundo um pouco mais claro ao passar o mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7); /* Intensifica a sombra ao passar o mouse */
 }
