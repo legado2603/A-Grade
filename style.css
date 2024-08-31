@@ -448,8 +448,7 @@ button:hover {
     border-color: #ffff00; /* Adiciona uma borda amarela ao passar o mouse */
     background-color: #444; /* Fundo um pouco mais claro ao passar o mouse */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7); /* Intensifica a sombra ao passar o mouse */
-}
-.viewport {
+}.viewport {
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -461,9 +460,9 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Ajuste manual do tamanho da tela de exibição */
-    max-width: 80vw; /* Ajusta a largura da tela para 80% da largura da janela */
-    max-height: 60vh; /* Ajusta a altura da tela para 60% da altura da janela */
+    /* Aumenta o tamanho da tela de exibição */
+    max-width: 90vw; /* Aumenta para 90% da largura da janela */
+    max-height: 70vh; /* Aumenta para 70% da altura da janela */
 }
 
 .video-item {
@@ -485,12 +484,14 @@ iframe {
     background: rgba(0, 0, 0, 0.5); /* Fundo transparente com preto */
     padding: 10px;
     border-top: 2px solid #32CD32; /* Borda superior verde neon */
+    max-height: 110px; /* Limita a altura da seção de miniaturas */
 }
 
 .thumbnail {
     margin-right: 10px;
     cursor: pointer;
     transition: transform 0.3s;
+    flex-shrink: 0; /* Garante que as miniaturas não encolham */
 }
 
 .thumbnail:hover {
@@ -498,8 +499,8 @@ iframe {
 }
 
 .thumbnail img {
-    width: 120px;
-    height: 90px;
+    width: 100px; /* Ajusta o tamanho da miniatura */
+    height: 75px; /* Ajusta a altura da miniatura */
     border: 2px solid #FFD700; /* Borda amarela nas imagens */
 }
 
