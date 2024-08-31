@@ -91,7 +91,7 @@ function fecharModal() {
 gapi.load('client', carregarAPI);
 // Inicializa a API do YouTube com sua chave de API
 gapi.load('client', function() {
-    gapi.client.setApiKey('AIzaSyA6HXa5GsktPI2htICCMaGKJ7mJhUX18m4');
+    gapi.client.setApiKey('AIzaSyCpT_lA2JjlAZLFMj9fknwib03VX-Yd8Fg');
     carregarAPI(); // Chama a função carregarAPI() após a inicialização da chave de API
 });
         function sendMessage() {

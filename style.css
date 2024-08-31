@@ -449,3 +449,60 @@ button:hover {
     background-color: #444; /* Fundo um pouco mais claro ao passar o mouse */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7); /* Intensifica a sombra ao passar o mouse */
 }
+.viewport {
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    width: 70vw;
+}
+
+.video-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Ajuste manual do tamanho da tela de exibição */
+    max-width: 90vw; /* Ajusta a largura da tela para 80% da largura da janela */
+    max-height: 90vh; /* Ajusta a altura da tela para 60% da altura da janela */
+}
+
+.video-item {
+    height: 100%;
+    width: 100%;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.thumbnail-container {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    white-space: nowrap;
+    background: rgba(0, 0, 0, 0.5); /* Fundo transparente com preto */
+    padding: 10px;
+    border-top: 2px solid #32CD32; /* Borda superior verde neon */
+}
+
+.thumbnail {
+    margin-right: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.thumbnail:hover {
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+}
+
+.thumbnail img {
+    width: 120px;
+    height: 20px;
+    border: 2px solid #FFD700; /* Borda amarela nas imagens */
+}
+
+.thumbnail img:hover {
+    border-color: #32CD32; /* Borda verde neon ao passar o mouse */
+}
