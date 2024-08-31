@@ -23,7 +23,7 @@ function renderVideo(index) {
     if (video) {
         videoContainer.innerHTML = `
             <div class="video-item">
-                <iframe src="https://www.youtube.com/embed/${video.id}?autoplay=1&playsinline=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/${video.id}?playsinline=1" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         `;
     }
