@@ -452,8 +452,8 @@ button:hover {
 .viewport {
     display: flex;
     flex-direction: column;
-    height: 70vh;
-    width: 70vw;
+    height: 100vh;
+    width: 100vw;
 }
 
 .video-container {
@@ -462,8 +462,8 @@ button:hover {
     justify-content: center;
     align-items: center;
     /* Ajuste manual do tamanho da tela de exibição */
-    max-width: 90vw; /* Ajusta a largura da tela para 80% da largura da janela */
-    max-height: 90vh; /* Ajusta a altura da tela para 60% da altura da janela */
+    max-width: 80vw; /* Ajusta a largura da tela para 80% da largura da janela */
+    max-height: 60vh; /* Ajusta a altura da tela para 60% da altura da janela */
 }
 
 .video-item {
@@ -499,7 +499,7 @@ iframe {
 
 .thumbnail img {
     width: 120px;
-    height: 20px;
+    height: 90px;
     border: 2px solid #FFD700; /* Borda amarela nas imagens */
 }
 
