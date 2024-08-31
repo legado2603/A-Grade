@@ -5,7 +5,7 @@ const thumbnailContainer = document.getElementById('thumbnail-container');
 let videos = [];
 
 function loadVideos(query) {
-    fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=${query}%20shorts&key=${apiKey}`)
+    fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=${query}%20shorts&key=${apiKey}`)
         .then(response => response.json())
         .then(data => {
             videos = data.items.map(item => ({
