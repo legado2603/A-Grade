@@ -77,7 +77,7 @@ padding: 20px;
 .extra-space {
 grid-column: 3; /* Ocupa a terceira coluna */
 grid-row: 2 / 3; /* Ocupa da segunda linha até o final */
-background-image: url('a875e73d0a7738025e9f46fd8372f4e7.jp'); /* Imagem de fundo para o espaço extra */
+background-image: url('#'); /* Imagem de fundo para o espaço extra */
 background-size: cover;
 padding: 100px;
 }
