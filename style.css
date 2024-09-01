@@ -1,5 +1,5 @@
 .container > div {
-border-right: 1px solid #ccc; /* Adiciona uma linha visível à direita de cada coluna */
+border-right: 1px solid #ccc; /* Adiciona uma linha visÃ­vel Ã  direita de cada coluna */
 }
 body {
 font-family: Arial, sans-serif;
@@ -11,40 +11,40 @@ background-color: #f0f0f0;
 }
 .container {
     display: grid;
-    grid-template-columns: auto 1fr auto; /* Divide em três colunas */
+    grid-template-columns: auto 1fr auto; /* Divide em trÃªs colunas */
     grid-template-rows: auto 1fr;
     min-height: 100vh;
 }
-/* Estilo específico para dispositivos móveis */
-@media (max-width: 768px) { /* Ajuste o valor conforme necessário */
+/* Estilo especÃ­fico para dispositivos mÃ³veis */
+@media (max-width: 768px) { /* Ajuste o valor conforme necessÃ¡rio */
     .container {
         grid-template-columns: 1fr; /* Uma coluna para a tela menor */
         grid-template-rows: auto 1fr; /* Ajusta as linhas para apenas uma coluna */
     }
 
     .sidebar {
-        grid-column: 1; /* Ocupa toda a coluna em dispositivos móveis */
+        grid-column: 1; /* Ocupa toda a coluna em dispositivos mÃ³veis */
         width: 100%; /* Largura total para a barra lateral */
     }
 
     .extra-space {
-        display: none; /* Oculta o espaço extra em dispositivos móveis */
+        display: none; /* Oculta o espaÃ§o extra em dispositivos mÃ³veis */
     }
 
     .content {
-        margin-left: 0; /* Remove a margem esquerda quando a barra lateral está visível */
+        margin-left: 0; /* Remove a margem esquerda quando a barra lateral estÃ¡ visÃ­vel */
     }
 }
 
-/* Estilo específico para telas maiores (desktop) */
+/* Estilo especÃ­fico para telas maiores (desktop) */
 @media (min-width: 769px) {
     .extra-space {
-        display: block; /* Garante que o espaço extra seja exibido em telas maiores */
+        display: block; /* Garante que o espaÃ§o extra seja exibido em telas maiores */
     }
 }
 .header {
-grid-column: 1 / 4; /* Ocupa todas as três colunas */
-background-image: url('agrade.png');  /* Imagem de fundo para o cabeçalho */
+grid-column: 1 / 4; /* Ocupa todas as trÃªs colunas */
+background-image: url('agrade.png');  /* Imagem de fundo para o cabeÃ§alho */
 background-size: cover;
 background-position: center;
 color: #add8e6;
@@ -52,32 +52,32 @@ padding: 20px;
 }
 .sidebar {
     grid-column: 1; /* Ocupa a primeira coluna */
-    grid-row: 2 / 3; /* Ocupa da segunda linha até o final */
+    grid-row: 2 / 3; /* Ocupa da segunda linha atÃ© o final */
     background-image: url('caminho/para/sua/imagem_sidebar.jpg'); /* Imagem de fundo para a barra lateral */
     background-size: cover;
     color: #add8e6;
     padding: 1px;
-    overflow: hidden; /* Oculta o conteúdo que excede a área */
-    transition: width 0.5s; /* Transição suave da largura */
+    overflow: hidden; /* Oculta o conteÃºdo que excede a Ã¡rea */
+    transition: width 0.5s; /* TransiÃ§Ã£o suave da largura */
     width: 0; /* Largura inicial da barra lateral (oculta) */
 }
 
 .sidebar.show-sidebar {
-    width: 200px; /* Largura da barra lateral quando estiver visível */
+    width: 200px; /* Largura da barra lateral quando estiver visÃ­vel */
 }
 
 .content {
-    margin-left: 0; /* Sem espaço para o conteúdo principal inicialmente */
-    transition: margin-left 0.5s; /* Transição suave do espaçamento */
+    margin-left: 0; /* Sem espaÃ§o para o conteÃºdo principal inicialmente */
+    transition: margin-left 0.5s; /* TransiÃ§Ã£o suave do espaÃ§amento */
 }
 
 .content.expand-content {
-    margin-left: 200px; /* Espaço para o conteúdo principal quando a sidebar está visível */
+    margin-left: 200px; /* EspaÃ§o para o conteÃºdo principal quando a sidebar estÃ¡ visÃ­vel */
 }
 .extra-space {
 grid-column: 3; /* Ocupa a terceira coluna */
-grid-row: 2 / 3; /* Ocupa da segunda linha até o final */
-background-image: url('.jpg'); /* Imagem de fundo para o espaço extra */
+grid-row: 2 / 3; /* Ocupa da segunda linha atÃ© o final */
+background-image: url('.jpg'); /* Imagem de fundo para o espaÃ§o extra */
 background-size: cover;
 padding: 100px;
 }
@@ -85,22 +85,22 @@ padding: 100px;
   width: 100px;
   height: 100px;
   border-radius: 21%;
-  background-color: black; /* Cor de fundo temporária */
+  background-color: black; /* Cor de fundo temporÃ¡ria */
   margin: 20px;
-  background-size: cover; /* Para garantir que a imagem ocupe todo o espaço */
+  background-size: cover; /* Para garantir que a imagem ocupe todo o espaÃ§o */
   background-position: center; /* Para centralizar a imagem */
 }
 .hide-text {
-color: transparent; /* Torna o texto transparente quando a barra lateral está oculta */
+color: transparent; /* Torna o texto transparente quando a barra lateral estÃ¡ oculta */
 }
 .toggle-button {
-border-radius: 50%; /* Faz o botão redondo */
-padding: 10px; /* Ajusta o espaçamento interno do botão */
-background-color: rgba(0, 0, 0, 0.3);; /* Cor de fundo do botão */
-border: 7px; /* Remove a borda do botão */
+border-radius: 50%; /* Faz o botÃ£o redondo */
+padding: 10px; /* Ajusta o espaÃ§amento interno do botÃ£o */
+background-color: rgba(0, 0, 0, 0.3);; /* Cor de fundo do botÃ£o */
+border: 7px; /* Remove a borda do botÃ£o */
 color:yellow;
-cursor: pointer; /* Muda o cursor para indicar que o botão é clicável */
-transition: background-color 0.3s; /* Adiciona uma transição suave para a cor de fundo */
+cursor: pointer; /* Muda o cursor para indicar que o botÃ£o Ã© clicÃ¡vel */
+transition: background-color 0.3s; /* Adiciona uma transiÃ§Ã£o suave para a cor de fundo */
 }
 .toggle-button {
 border-radius: 50%;
@@ -110,7 +110,7 @@ border: none;
 cursor: pointer;
 transition: background-color 0.3s;
 position: relative; /* Adiciona posicionamento relativo */
-z-index: 1000; /* Define um índice z alto */
+z-index: 1000; /* Define um Ã­ndice z alto */
 }
 
 .config-panel {
@@ -187,7 +187,7 @@ align-items: center;
             font-family: Arial, sans-serif;
         }
 
-        /* Estilo do botão */
+        /* Estilo do botÃ£o */
         .open-button {
             background-color: rgba(0, 0, 0, 0.5);
             color: yellow;
@@ -298,7 +298,7 @@ align-items: center;
 }
 
 .news-item {
-    background: rgba(50, 50, 50, 0.8); /* Fundo ajustado para tom escuro com transparência */
+    background: rgba(50, 50, 50, 0.8); /* Fundo ajustado para tom escuro com transparÃªncia */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra mais intensa */
     margin-bottom: 20px;
@@ -340,7 +340,7 @@ align-items: center;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.9); /* Fundo escuro translúcido */
+    background: rgba(0, 0, 0, 0.9); /* Fundo escuro translÃºcido */
     z-index: 1000;
     overflow: auto;
 }
@@ -367,18 +367,18 @@ align-items: center;
     font-size: 20px;
     color: #red; /* Cor do texto ajustada */
     cursor: pointer;
-    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+    transition: background-color 0.3s; /* TransiÃ§Ã£o suave para a cor de fundo */
 }
 
 #iframe-container .close-btn:hover {
     background: #333; /* Fundo escuro ao passar o mouse */
 }
-/* Estilo do <h3> para manter o estilo da página */
+/* Estilo do <h3> para manter o estilo da pÃ¡gina */
 h3 {
-    color: #add8e6; /* Cor do texto no cabeçalho */
-    margin: 0; /* Remove margens padrão do <h3> */
-    padding: 0; /* Remove preenchimento padrão do <h3> */
-    font-size: 24px; /* Define o tamanho da fonte para o cabeçalho */
+    color: #add8e6; /* Cor do texto no cabeÃ§alho */
+    margin: 0; /* Remove margens padrÃ£o do <h3> */
+    padding: 0; /* Remove preenchimento padrÃ£o do <h3> */
+    font-size: 24px; /* Define o tamanho da fonte para o cabeÃ§alho */
 }
 
 /* Estilo do div com id "youtube" */
@@ -386,20 +386,20 @@ h3 {
     font-family: 'Arial Black', Arial, sans-serif; /* Fonte especificada */
     color: #00ff00; /* Cor do texto verde */
     font-weight: bold; /* Texto em negrito */
-    font-style: italic; /* Texto em itálico */
+    font-style: italic; /* Texto em itÃ¡lico */
     border: 2px solid #ffff00; /* Borda amarela ao redor do texto */
-    padding: 10px; /* Espaçamento interno */
+    padding: 10px; /* EspaÃ§amento interno */
     border-radius: 5px; /* Bordas arredondadas */
     background: rgba(0, 0, 0, 0.5); /* Fundo escuro semi-transparente */
 }
 
-/* Remove o <div> vazio se não for necessário */
+/* Remove o <div> vazio se nÃ£o for necessÃ¡rio */
 h3 > div:last-child {
     display: none;
 }
-/* Estilização do campo de entrada */
+/* EstilizaÃ§Ã£o do campo de entrada */
 #termoPesquisa {
-    width: calc(100% - 120px); /* Ajuste a largura para combinar com o botão */
+    width: calc(100% - 120px); /* Ajuste a largura para combinar com o botÃ£o */
     padding: 10px;
     border: 2px solid #ffcc00; /* Borda amarela */
     border-radius: 5px;
@@ -408,43 +408,43 @@ h3 > div:last-child {
     font-family: Arial, sans-serif; /* Fonte consistente */
     font-size: 16px; /* Tamanho da fonte */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra ao redor */
-    outline: none; /* Remove o contorno padrão */
+    outline: none; /* Remove o contorno padrÃ£o */
 }
 
-/* Estilização do botão com borda amarela */
+/* EstilizaÃ§Ã£o do botÃ£o com borda amarela */
 button {
     background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo escura com opacidade */
     color: yellow; /* Cor do texto */
     padding: 10px 20px;
     border: 2px solid #ffcc00; /* Borda amarela */
     border-radius: 50px; /* Bordas arredondadas */
-    cursor: pointer; /* Cursor de mão ao passar sobre o botão */
+    cursor: pointer; /* Cursor de mÃ£o ao passar sobre o botÃ£o */
     font-size: 16px; /* Tamanho da fonte */
     font-family: Arial, sans-serif; /* Fonte consistente */
-    transition: background-color 0.3s; /* Transição suave de cor de fundo */
+    transition: background-color 0.3s; /* TransiÃ§Ã£o suave de cor de fundo */
 }
 
-/* Efeito de hover no botão */
+/* Efeito de hover no botÃ£o */
 button:hover {
     background-color: rgba(0, 0, 0, 0.7); /* Escurece o fundo ao passar o mouse */
 }
-/* Estilo dos links de título dos vídeos */
+/* Estilo dos links de tÃ­tulo dos vÃ­deos */
 #resultadoPesquisa a {
     color: #ffff00; /* Cor amarela do texto */
-    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    text-decoration: none; /* Remove o sublinhado padrÃ£o dos links */
     font-family: 'Arial Black', sans-serif; /* Define a fonte como Arial Black */
-    font-size: 17px; /* Ajusta o tamanho da fonte conforme necessário */
+    font-size: 17px; /* Ajusta o tamanho da fonte conforme necessÃ¡rio */
     display: inline-block; /* Garante que o padding e margin sejam aplicados corretamente */
-    padding: 12px 20px; /* Adiciona espaçamento ao redor do texto */
+    padding: 12px 20px; /* Adiciona espaÃ§amento ao redor do texto */
     border: 2px solid transparent; /* Adiciona uma borda transparente para evitar deslocamento de layout */
     border-radius: 8px; /* Arredonda os cantos dos links */
     background-color: #333; /* Fundo escuro */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adiciona sombra para um efeito de profundidade */
-    transition: all 0.3s ease; /* Adiciona uma transição suave para efeitos ao passar o mouse */
+    transition: all 0.3s ease; /* Adiciona uma transiÃ§Ã£o suave para efeitos ao passar o mouse */
 }
 
 #resultadoPesquisa a:hover {
-    color: #ffff00; /* Mantém a cor amarela do texto ao passar o mouse */
+    color: #ffff00; /* MantÃ©m a cor amarela do texto ao passar o mouse */
     border-color: #ffff00; /* Adiciona uma borda amarela ao passar o mouse */
     background-color: #444; /* Fundo um pouco mais claro ao passar o mouse */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7); /* Intensifica a sombra ao passar o mouse */
@@ -460,7 +460,7 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Aumenta o tamanho da tela de exibição */
+    /* Aumenta o tamanho da tela de exibiÃ§Ã£o */
     max-width: 90vw; /* Aumenta para 90% da largura da janela */
     max-height: 70vh; /* Aumenta para 70% da altura da janela */
 }
@@ -484,14 +484,520 @@ iframe {
     background: rgba(0, 0, 0, 0.5); /* Fundo transparente com preto */
     padding: 10px;
     border-top: 2px solid #32CD32; /* Borda superior verde neon */
-    max-height: 110px; /* Limita a altura da seção de miniaturas */
+    max-height: 110px; /* Limita a altura da seÃ§Ã£o de miniaturas */
 }
 
 .thumbnail {
     margin-right: 10px;
     cursor: pointer;
     transition: transform 0.3s;
-    flex-shrink: 0; /* Garante que as miniaturas não encolham */
+    flex-shrink: 0; /* Garante que as miniaturas nÃ£o encolham */
+}
+
+.thumbnail:hover {
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+}
+
+.thumbnail img {
+    width: 100px; /* Ajusta o tamanho da miniatura */
+    height: 75px; /* Ajusta a altura da miniatura */
+    border: 2px solid #FFD700; /* Borda amarela nas imagens */
+}
+
+.thumbnail img:hover {
+    border-color: #32CD32; /* Borda verde neon ao passar o mouse */
+}.container > div {
+border-right: 1px solid #ccc; /* Adiciona uma linha visÃ­vel Ã  direita de cada coluna */
+}
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+color:#add8e6;
+background-image: url('21d07158420bbab94259cddfdc47cec3.jpg');
+background-color: #f0f0f0;
+}
+.container {
+    display: grid;
+    grid-template-columns: auto 1fr auto; /* Divide em trÃªs colunas */
+    grid-template-rows: auto 1fr;
+    min-height: 100vh;
+}
+/* Estilo especÃ­fico para dispositivos mÃ³veis */
+@media (max-width: 768px) { /* Ajuste o valor conforme necessÃ¡rio */
+    .container {
+        grid-template-columns: 1fr; /* Uma coluna para a tela menor */
+        grid-template-rows: auto 1fr; /* Ajusta as linhas para apenas uma coluna */
+    }
+
+    .sidebar {
+        grid-column: 1; /* Ocupa toda a coluna em dispositivos mÃ³veis */
+        width: 100%; /* Largura total para a barra lateral */
+    }
+
+    .extra-space {
+        display: none; /* Oculta o espaÃ§o extra em dispositivos mÃ³veis */
+    }
+
+    .content {
+        margin-left: 0; /* Remove a margem esquerda quando a barra lateral estÃ¡ visÃ­vel */
+    }
+}
+
+/* Estilo especÃ­fico para telas maiores (desktop) */
+@media (min-width: 769px) {
+    .extra-space {
+        display: block; /* Garante que o espaÃ§o extra seja exibido em telas maiores */
+    }
+}
+.header {
+grid-column: 1 / 4; /* Ocupa todas as trÃªs colunas */
+background-image: url('agrade.png');  /* Imagem de fundo para o cabeÃ§alho */
+background-size: cover;
+background-position: center;
+color: #add8e6;
+padding: 20px;
+}
+.sidebar {
+    grid-column: 1; /* Ocupa a primeira coluna */
+    grid-row: 2 / 3; /* Ocupa da segunda linha atÃ© o final */
+    background-image: url('caminho/para/sua/imagem_sidebar.jpg'); /* Imagem de fundo para a barra lateral */
+    background-size: cover;
+    color: #add8e6;
+    padding: 1px;
+    overflow: hidden; /* Oculta o conteÃºdo que excede a Ã¡rea */
+    transition: width 0.5s; /* TransiÃ§Ã£o suave da largura */
+    width: 0; /* Largura inicial da barra lateral (oculta) */
+}
+
+.sidebar.show-sidebar {
+    width: 200px; /* Largura da barra lateral quando estiver visÃ­vel */
+}
+
+.content {
+    margin-left: 0; /* Sem espaÃ§o para o conteÃºdo principal inicialmente */
+    transition: margin-left 0.5s; /* TransiÃ§Ã£o suave do espaÃ§amento */
+}
+
+.content.expand-content {
+    margin-left: 200px; /* EspaÃ§o para o conteÃºdo principal quando a sidebar estÃ¡ visÃ­vel */
+}
+.extra-space {
+grid-column: 3; /* Ocupa a terceira coluna */
+grid-row: 2 / 3; /* Ocupa da segunda linha atÃ© o final */
+background-image: url('.jpg'); /* Imagem de fundo para o espaÃ§o extra */
+background-size: cover;
+padding: 100px;
+}
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 21%;
+  background-color: black; /* Cor de fundo temporÃ¡ria */
+  margin: 20px;
+  background-size: cover; /* Para garantir que a imagem ocupe todo o espaÃ§o */
+  background-position: center; /* Para centralizar a imagem */
+}
+.hide-text {
+color: transparent; /* Torna o texto transparente quando a barra lateral estÃ¡ oculta */
+}
+.toggle-button {
+border-radius: 50%; /* Faz o botÃ£o redondo */
+padding: 10px; /* Ajusta o espaÃ§amento interno do botÃ£o */
+background-color: rgba(0, 0, 0, 0.3);; /* Cor de fundo do botÃ£o */
+border: 7px; /* Remove a borda do botÃ£o */
+color:yellow;
+cursor: pointer; /* Muda o cursor para indicar que o botÃ£o Ã© clicÃ¡vel */
+transition: background-color 0.3s; /* Adiciona uma transiÃ§Ã£o suave para a cor de fundo */
+}
+.toggle-button {
+border-radius: 50%;
+padding: 10px;
+background-color:rgba(0, 0, 0, 0.3);;
+border: none;
+cursor: pointer;
+transition: background-color 0.3s;
+position: relative; /* Adiciona posicionamento relativo */
+z-index: 1000; /* Define um Ã­ndice z alto */
+}
+
+.config-panel {
+display: none; /* Inicialmente oculta */
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+color: #add8e6;
+background-color: rgba(0, 0, 0, 0.9);
+z-index: 999;
+justify-content: center;
+align-items: center;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+    margin: 15% auto;
+    padding: 20px;
+    width: 70%;
+    background-color: #fefefe;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.h1
+{
+ color:#add8e6;
+
+}
+        .marquee {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            box-sizing: border-box;
+            color:yellow;
+        }
+
+        .marquee span {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 21s linear infinite, delay 3s steps(1) infinite;
+        }
+
+        @keyframes marquee {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
+        }
+
+        /* Estilo do botÃ£o */
+        .open-button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: yellow;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 50px;
+            font-size: 16px;
+        }
+
+        /* Estilo do modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .modal-content {
+            background-color: rgba(50, 50, 50, 0.8);
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            border-radius: 10px;
+            color: white;
+        }
+
+        /* Estilo do chat */
+        .chat {
+            max-height: 300px;
+            overflow-y: auto;
+            padding: 10px;
+        }
+
+        .chat-message {
+            margin: 10px 0;
+        }
+
+        .user-message {
+            color: lightblue;
+            text-align: right;
+        }
+
+        .bot-message {
+            color: yellow;
+            text-align: left;
+        }
+
+        /* Estilo do campo de entrada */
+        .chat-input {
+            width: 90%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: none;
+
+            color:red;
+        }
+
+        .chat-button {
+            padding: 10px;
+            background-color: black;
+            border: none;
+            cursor: pointer;
+            border-radius: 50px;
+            margin-top: 10px;
+            color: green;
+        }
+                /* CSS para o efeito de chamas amarelas */
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto; /* Centraliza a logo horizontalmente */
+            filter: 
+                drop-shadow(0 0 3px #ffcc00) /* Chamas amarelas com menor intensidade */
+                drop-shadow(0 0 6px #ffcc00);
+            animation: flame 1.5s infinite alternate;
+        }
+
+        @keyframes flame {
+            0% {
+                filter: 
+                    drop-shadow(0 0 3px #ffcc00) 
+                    drop-shadow(0 0 6px #ffcc00);
+            }
+            50% {
+                filter: 
+                    drop-shadow(0 0 4px #ffcc00) 
+                    drop-shadow(0 0 8px #ffcc00);
+            }
+            100% {
+                filter: 
+                    drop-shadow(0 0 6px #ffcc00) 
+                    drop-shadow(0 0 10px #ffcc00);
+            }
+        }
+
+
+#news-container {
+    padding: 20px;
+}
+
+.news-item {
+    background: rgba(50, 50, 50, 0.8); /* Fundo ajustado para tom escuro com transparÃªncia */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra mais intensa */
+    margin-bottom: 20px;
+    padding: 15px;
+    position: relative;
+    color: #add8e6; /* Cor do texto ajustada */
+}
+
+.news-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.8); /* Efeito de sombra em chamas amarelas */
+}
+
+.news-item h2 {
+    margin-top: 0;
+    color: #ffcc00; /* Cor do texto ajustada */
+}
+
+.news-item p {
+    margin: 0;
+    color: #add8e6; /* Cor do texto ajustada */
+}
+
+.news-item a {
+    color: yellow; /* Cor do link ajustada */
+    text-decoration: none;
+}
+
+.news-item a:hover {
+    text-decoration: underline;
+}
+
+#iframe-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9); /* Fundo escuro translÃºcido */
+    z-index: 1000;
+    overflow: auto;
+}
+
+#iframe-container iframe {
+    width: 80%;
+    height: 80%;
+    border: none;
+    margin: 20px auto;
+    display: block;
+    background: #fff; /* Fundo ajustado para tom claro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra mais suave */
+}
+
+#iframe-container .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(50, 50, 50, 0.8); /* Fundo ajustado para tom escuro */
+    border: 2px solid greenyellow; /* Borda azul-claro */
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    color: #red; /* Cor do texto ajustada */
+    cursor: pointer;
+    transition: background-color 0.3s; /* TransiÃ§Ã£o suave para a cor de fundo */
+}
+
+#iframe-container .close-btn:hover {
+    background: #333; /* Fundo escuro ao passar o mouse */
+}
+/* Estilo do <h3> para manter o estilo da pÃ¡gina */
+h3 {
+    color: #add8e6; /* Cor do texto no cabeÃ§alho */
+    margin: 0; /* Remove margens padrÃ£o do <h3> */
+    padding: 0; /* Remove preenchimento padrÃ£o do <h3> */
+    font-size: 24px; /* Define o tamanho da fonte para o cabeÃ§alho */
+}
+
+/* Estilo do div com id "youtube" */
+#youtube {
+    font-family: 'Arial Black', Arial, sans-serif; /* Fonte especificada */
+    color: #00ff00; /* Cor do texto verde */
+    font-weight: bold; /* Texto em negrito */
+    font-style: italic; /* Texto em itÃ¡lico */
+    border: 2px solid #ffff00; /* Borda amarela ao redor do texto */
+    padding: 10px; /* EspaÃ§amento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    background: rgba(0, 0, 0, 0.5); /* Fundo escuro semi-transparente */
+}
+
+/* Remove o <div> vazio se nÃ£o for necessÃ¡rio */
+h3 > div:last-child {
+    display: none;
+}
+/* EstilizaÃ§Ã£o do campo de entrada */
+#termoPesquisa {
+    width: calc(100% - 120px); /* Ajuste a largura para combinar com o botÃ£o */
+    padding: 10px;
+    border: 2px solid #ffcc00; /* Borda amarela */
+    border-radius: 5px;
+    background-color: #333; /* Cor de fundo escura */
+    color: #add8e6; /* Cor do texto */
+    font-family: Arial, sans-serif; /* Fonte consistente */
+    font-size: 16px; /* Tamanho da fonte */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra ao redor */
+    outline: none; /* Remove o contorno padrÃ£o */
+}
+
+/* EstilizaÃ§Ã£o do botÃ£o com borda amarela */
+button {
+    background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo escura com opacidade */
+    color: yellow; /* Cor do texto */
+    padding: 10px 20px;
+    border: 2px solid #ffcc00; /* Borda amarela */
+    border-radius: 50px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de mÃ£o ao passar sobre o botÃ£o */
+    font-size: 16px; /* Tamanho da fonte */
+    font-family: Arial, sans-serif; /* Fonte consistente */
+    transition: background-color 0.3s; /* TransiÃ§Ã£o suave de cor de fundo */
+}
+
+/* Efeito de hover no botÃ£o */
+button:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Escurece o fundo ao passar o mouse */
+}
+/* Estilo dos links de tÃ­tulo dos vÃ­deos */
+#resultadoPesquisa a {
+    color: #ffff00; /* Cor amarela do texto */
+    text-decoration: none; /* Remove o sublinhado padrÃ£o dos links */
+    font-family: 'Arial Black', sans-serif; /* Define a fonte como Arial Black */
+    font-size: 17px; /* Ajusta o tamanho da fonte conforme necessÃ¡rio */
+    display: inline-block; /* Garante que o padding e margin sejam aplicados corretamente */
+    padding: 12px 20px; /* Adiciona espaÃ§amento ao redor do texto */
+    border: 2px solid transparent; /* Adiciona uma borda transparente para evitar deslocamento de layout */
+    border-radius: 8px; /* Arredonda os cantos dos links */
+    background-color: #333; /* Fundo escuro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adiciona sombra para um efeito de profundidade */
+    transition: all 0.3s ease; /* Adiciona uma transiÃ§Ã£o suave para efeitos ao passar o mouse */
+}
+
+#resultadoPesquisa a:hover {
+    color: #ffff00; /* MantÃ©m a cor amarela do texto ao passar o mouse */
+    border-color: #ffff00; /* Adiciona uma borda amarela ao passar o mouse */
+    background-color: #444; /* Fundo um pouco mais claro ao passar o mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7); /* Intensifica a sombra ao passar o mouse */
+}.viewport {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+}
+
+.video-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Aumenta o tamanho da tela de exibiÃ§Ã£o */
+    max-width: 90vw; /* Aumenta para 90% da largura da janela */
+    max-height: 70vh; /* Aumenta para 70% da altura da janela */
+}
+
+.video-item {
+    height: 100%;
+    width: 100%;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.thumbnail-container {
+    width: calc(5 * 100px + 4 * 10px); /* Largura da miniatura * número de miniaturas + espaço entre elas */
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    white-space: nowrap;
+    background: rgba(0, 0, 0, 0.5); /* Fundo transparente com preto */
+    padding: 10px;
+    border-top: 2px solid #32CD32; /* Borda superior verde neon */
+    max-height: 110px; /* Limita a altura da seÃ§Ã£o de miniaturas */
+}
+
+.thumbnail {
+    margin-right: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    flex-shrink: 0; /* Garante que as miniaturas nÃ£o encolham */
 }
 
 .thumbnail:hover {
