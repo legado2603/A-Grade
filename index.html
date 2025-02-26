@@ -368,6 +368,23 @@ auth.onAuthStateChanged((user) => {
 });
         
   </script>
+  <script>
+let clickCount = 0;
+let timeout;
+
+document.addEventListener("click", () => {
+    clickCount++;
+
+    clearTimeout(timeout);
+    timeout = setTimeout(() => {
+        clickCount = 0;
+    }, 1000);
+
+    if (clickCount === 20) {
+        window.location.href = "https://legado2603.github.io/agrade.21/";
+    }
+});
+  </script>
   
 </body>
 </html>
