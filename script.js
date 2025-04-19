@@ -108,6 +108,9 @@ document.getElementById("outroBotao").addEventListener("click", function() {
 document.getElementById("outroBotao2").addEventListener("click", function() {
     window.location.href = "agrade2(red).html"; // Substitua pela URL desejada
 });
+document.getElementById("outroBotao8").addEventListener("click", function() {
+    window.location.href = "enn.html"; // Substitua pela URL desejada
+});
 
 document.getElementById("outroBotao3").addEventListener("click", function() {
     window.location.href = "agrade3(violet).html"; // Substitua pela URL desejada
