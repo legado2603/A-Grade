@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cadastro para Recrutamento</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 30px auto;
+      background: #fff;
+      padding: 25px 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+
+    input[type="file"] {
+      padding: 3px;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    .button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 15px;
+    }
+
+    .button:hover {
+      background: #0056b3;
+    }
+
+    .success-message {
+      text-align: center;
+      color: green;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📋 Recrutamento<br>Estado Nebulosa do Norte</h1>
+    <form id="cadastroForm">
+      <div class="form-group">
+        <label for="nome">👤 Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+      </div>
+
+      <div class="form-group">
+        <label for="sobrenome">👤 Sobrenome:</label>
+        <input type="text" id="sobrenome" name="sobrenome" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">📧 E-mail:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="telefone">📞 Telefone:</label>
+        <input type="tel" id="telefone" name="telefone" required>
+      </div>
+
+      <div class="form-group">
+        <label for="pix">💰 Chave Pix:</label>
+        <input type="text" id="pix" name="pix">
+      </div>
+
+      <div class="form-group">
+        <label for="nascimento">🎂 Data de Nascimento:</label>
+        <input type="date" id="nascimento" name="nascimento" required>
+      </div>
+
+      <div class="form-group">
+        <label for="genero">⚧️ Gênero:</label>
+        <select id="genero" name="genero">
+          <option value="">Selecione</option>
+          <option value="masculino">Masculino</option>
+          <option value="feminino">Feminino</option>
+          <option value="outro">Outro</option>
+          <option value="prefiro-nao-dizer">Prefiro não dizer</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="cidade">🏙️ Cidade:</label>
+        <input type="text" id="cidade" name="cidade" required>
+      </div>
+
+      <div class="form-group">
+        <label for="estado">🌎 Estado:</label>
+        <input type="text" id="estado" name="estado" required>
+      </div>
+
+      <div class="form-group">
+        <label for="area">💼 Área de Interesse:</label>
+        <input type="text" id="area" name="area" placeholder="Ex: Marketing, TI, RH..." required>
+      </div>
+
+      <div class="form-group">
+        <label for="experiencia">📊 Nível de Experiência:</label>
+        <select id="experiencia" name="experiencia" required>
+          <option value="">Selecione</option>
+          <option value="iniciante">Iniciante</option>
+          <option value="intermediario">Intermediário</option>
+          <option value="avancado">Avançado</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="horarios">🕒 Horários de Disponibilidade:</label>
+        <input type="text" id="horarios" name="horarios" placeholder="Ex: Manhã, Tarde, Noite, Horário Comercial">
+      </div>
+
+      <div class="form-group">
+        <label>🌐 Redes Sociais:</label>
+        <input type="url" name="linkedin" placeholder="🔗 LinkedIn">
+        <input type="url" name="instagram" placeholder="📸 Instagram">
+        <input type="url" name="facebook" placeholder="📘 Facebook">
+        <input type="url" name="twitter" placeholder="🐦 Twitter/X">
+        <input type="url" name="tiktok" placeholder="🎵 TikTok">
+        <input type="url" name="github" placeholder="💻 GitHub (se aplicável)">
+      </div>
+
+      <div class="form-group">
+        <label for="sobre">🗣️ Fale um pouco sobre você:</label>
+        <textarea id="sobre" name="sobre" maxlength="500" placeholder="Conte brevemente sobre sua trajetória ou motivação."></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="curriculo">📎 Currículo (PDF ou DOC):</label>
+        <input type="file" id="curriculo" name="curriculo" accept=".pdf,.doc,.docx">
+      </div>
+
+      <button type="submit" class="button">🚀 Enviar Cadastro</button>
+    </form>
+    <div class="success-message" id="mensagemSucesso" style="display: none;">
+      ✅ Cadastro enviado com sucesso!
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('cadastroForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      document.getElementById('mensagemSucesso').style.display = 'block';
+      setTimeout(() => {
+        document.getElementById('mensagemSucesso').style.display = 'none';
+        document.getElementById('cadastroForm').reset();
+      }, 5000);
+    });
+  </script>
+</body>
+</html>
+
