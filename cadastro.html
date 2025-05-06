@@ -134,6 +134,16 @@
         <label for="estado">🌎 Estado:</label>
         <input type="text" id="estado" name="estado" required>
       </div>
+      <div class="form-group">
+  <label for="escolaridade">🎓 Nível de Escolaridade:</label>
+  <select id="escolaridade" name="escolaridade" required>
+    <option value="">Selecione</option>
+    <option value="fundamental-incompleto">Ensino Fundamental Incompleto</option>
+    <option value="fundamental-completo">Ensino Fundamental Completo</option>
+    <option value="medio-incompleto">Ensino Médio Incompleto</option>
+    <option value="medio-completo">Ensino Médio Completo</option>
+  </select>
+</div>
 
       <div class="form-group">
         <label for="area">💼 Área de Interesse:</label>
@@ -149,6 +159,79 @@
           <option value="avancado">Avançado</option>
         </select>
       </div>
+      <div class="form-group">
+  <label for="referencia">🔎 Como ficou sabendo do recrutamento?</label>
+  <select id="referencia" name="referencia" required>
+    <option value="">Selecione</option>
+    <option value="instagram">Instagram</option>
+    <option value="facebook">Facebook</option>
+    <option value="amigo">Indicação de amigo</option>
+    <option value="site">Site oficial</option>
+    <option value="outros">Outros</option>
+  </select>
+</div>
+<div class="form-group">
+  <label for="idiomas">🌍 Idiomas que fala (e nível):</label>
+  <input type="text" id="idiomas" name="idiomas" placeholder="Ex: Português (fluente), Inglês (intermediário)">
+</div>
+<div class="form-group">
+  <label for="reunioes">📡 Pode participar de reuniões online?</label>
+  <select id="reunioes" name="reunioes" required>
+    <option value="">Selecione</option>
+    <option value="sim">Sim</option>
+    <option value="nao">Não</option>
+    <option value="talvez">Talvez</option>
+  </select>
+</div>
+<div class="form-group">
+  <label for="treinamentos">📚 Você teria interesse em treinamentos internos oferecidos pela equipe?</label>
+  <select id="treinamentos" name="treinamentos">
+    <option value="">Selecione</option>
+    <option value="sim">Sim</option>
+    <option value="nao">Não</option>
+    <option value="depende">Depende da área</option>
+  </select>
+</div>
+<div class="form-group">
+  <label for="eventos">🧭 Teria disponibilidade para ações presenciais no futuro?</label>
+  <select id="eventos" name="eventos">
+    <option value="">Selecione</option>
+    <option value="sim">Sim</option>
+    <option value="nao">Não</option>
+    <option value="depende">Depende da localização</option>
+  </select>
+</div>
+<div class="form-group">
+  <label for="codigoAgente">🧬 Código de agente (caso tenha sido indicado):</label>
+  <input type="text" id="codigoAgente" name="codigoAgente" placeholder="Ex: AGX-427">
+</div>
+<div class="form-group">
+  <label for="multiplicador">🧠 Você gostaria de ajudar a espalhar os ideais do Estado Nebulosa do Norte?</label>
+  <select id="multiplicador" name="multiplicador">
+    <option value="">Selecione</option>
+    <option value="sim">Sim, quero ser uma voz ativa</option>
+    <option value="talvez">Talvez, com o tempo</option>
+    <option value="nao">Prefiro contribuir de forma silenciosa</option>
+  </select>
+</div>
+<div class="form-group">
+  <label for="criadorConteudo">🎨 Você cria ou gostaria de criar conteúdo para o ENN?</label>
+  <select id="criadorConteudo" name="criadorConteudo">
+    <option value="">Selecione</option>
+    <option value="sim">Sim, já crio</option>
+    <option value="quero">Quero começar</option>
+    <option value="nao">Não tenho esse interesse</option>
+  </select>
+</div>
+      <div class="form-group">
+  <label for="equipamento">🖥️ Possui equipamento próprio para trabalho/atividades?</label>
+  <select id="equipamento" name="equipamento" required>
+    <option value="">Selecione</option>
+    <option value="sim">Sim</option>
+    <option value="nao">Não</option>
+    <option value="parcialmente">Parcialmente</option>
+  </select>
+</div>
 
       <div class="form-group">
         <label for="horarios">🕒 Horários de Disponibilidade:</label>
@@ -174,6 +257,17 @@
         <label for="curriculo">📎 Currículo (PDF ou DOC):</label>
         <input type="file" id="curriculo" name="curriculo" accept=".pdf,.doc,.docx">
       </div>
+      <div class="form-group">
+  
+  <label for="newsletter">📬 Desejo receber atualizações e novidades por e-mail</label>
+  <input type="checkbox" id="newsletter" name="newsletter">
+</div>
+      <br>
+      <div class="form-group">
+ 
+  <label for="consentimento">Autorizo o uso das informações para fins de recrutamento.</label>
+   <input type="checkbox" id="consentimento" name="consentimento" required>
+</div>
 
       <button type="submit" class="button">🚀 Enviar Cadastro</button>
     </form>
