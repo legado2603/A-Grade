@@ -1013,3 +1013,8 @@ iframe {
 .thumbnail img:hover {
     border-color: #32CD32; /* Borda verde neon ao passar o mouse */
 }
+.logo {
+  width: 100px;       /* tamanho da logo */
+  display: block;     /* transforma a imagem em bloco */
+  margin: 0 auto;     /* centraliza horizontalmente */
+}
